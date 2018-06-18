@@ -17,6 +17,23 @@ debug = True
 
 import argparse
 
+parser = argparse.ArgumentParser(description="""
+Try importing a file into Spotlight with the default, and some or all
+of the mdimporters installed on an OS X system, to see if there is any
+difference in the mdfind search results afterwards.""")
+parser.add_argument('-i', '--importers', dest='importers',
+                    choices=['all', 'ms'],
+                    help="""
+                    If 'all' is specified (the default if this option
+                    is not specified), then try all importers.  If
+                    'ms' is specified, only try the RichText importer,
+                    and ones with 'Microsoft' in their name.
+                    """)
+args = parser.parse_known_args()[0]
+
+if args.importers is None:
+    args.importers = 'all'
+
 
 filename = 'osx-spotlight-test-files/MS-Word-for-Mac-version-16.9-Word-Document-docx.docx'
 test_search_term = 'vorkon' + 'inkawu'
@@ -27,7 +44,7 @@ print("test search term: %s" % (test_search_term))
 print("test search term: %s" % (test_search_term), file=sys.stderr)
 print("")
 
-mdimporter_lst = mdimporters.get_mdimporters()
+mdimporter_lst = mdimporters.get_mdimporters(args.importers)
 
 if debug:
     n = 0

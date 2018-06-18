@@ -3,7 +3,8 @@ import subprocess
 import sys
 
 
-def get_mdimporters():
+def get_mdimporters(desired_importers):
+    assert desired_importers in ['all', 'ms']
     output = subprocess.check_output(['mdimport', '-L'],
                                      stderr=subprocess.STDOUT)
     # Assume output of mdimport can be decoded as UTF-8
@@ -43,6 +44,10 @@ def get_mdimporters():
             sys.exit(1)
         mdimporter_name = match.group(1)
         mdimporter_lst.append(mdimporter_name)
+
+    if desired_importers == 'ms':
+        mdimporter_lst = [x for x in mdimporter_lst
+                          if ('RichText' in x or 'Microsoft' in x)]
     return mdimporter_lst
 
 
