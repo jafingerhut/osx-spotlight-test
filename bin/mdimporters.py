@@ -51,6 +51,53 @@ def get_mdimporters(desired_importers):
     return mdimporter_lst
 
 
+def do_mdimport(filename, mdimporter_choice):
+    args_part1 = ['mdimport', '-d4']
+    if mdimporter_choice is None or mdimporter_choice == '(default)':
+        args_part2 = []
+    else:
+        args_part2 = ['-g', mdimporter_choice]
+    args_part3 = [filename]
+    all_args = args_part1 + args_part2 + args_part3
+    mdimport_output = subprocess.check_output(all_args,
+                                              stderr=subprocess.STDOUT)
+    # Assume output of mdimport can be decoded as UTF-8
+    mdimport_output = mdimport_output.decode("utf-8")
+
+    # There may be error messages in the output.  Ignore those,
+    # looking for the one that says "Imported <filename> of type
+    # <type> with plugIn <mdimporter>." and extract out the pieces.
+
+    lines = mdimport_output.splitlines()
+    found_attributes_start = False
+    info = {}
+    for line in lines:
+        #print("dbg: %s" % (line))
+        match = re.match(r"""^.* mdimport.* Attributes: {\s*$""", line)
+        if match:
+            #print("dbg: found Attributes line")
+            found_attributes_start = True
+            break
+        match = re.match(r"""(?x) ^
+                             \s* \d+-\d+-\d+
+                             \s+ \d+:\d+:\d+(\.\d+)?
+                             \s+ mdimport \[ \d+ : \d+ \]
+                             \s+ Imported \s+ ' (?P<filename>.+) '
+                             \s+ of \s+ type
+                             \s+ ' (?P<uti>.+) '
+                             \s+ with \s+ plugIn
+                             \s+ (?P<mdimporter>.+)
+                             \. $""", line)
+        if match:
+            #print("dbg: found info line")
+            info['filename'] = match.group('filename')
+            info['uti'] = match.group('uti')
+            info['mdimporter'] = match.group('mdimporter')
+    assert found_attributes_start
+    assert 'filename' in info
+    return info
+
+
 def mdfind_search_results(test_search_term):
     output = subprocess.check_output(['mdfind', test_search_term])
     # Assume output of mdimport can be decoded as UTF-8
