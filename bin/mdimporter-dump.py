@@ -8,7 +8,7 @@ import time
 import mdimporters
 import snapshot
 
-mdimporter_lst = mdimporters.get_mdimporters('all')
+mdimporter_lst = sorted(mdimporters.get_mdimporters('all'))
 
 for m in mdimporter_lst:
     #print("type(sys.stdout)='%s'" % (type(sys.stdout)))
