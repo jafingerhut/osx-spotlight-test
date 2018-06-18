@@ -14,7 +14,7 @@ with open('test-file-info.json', 'r') as f:
 
 for w in maybe_unique_words:
     full_word = w['word_part1'] + w['word_part2']
-    print("word %s filename %s" % (full_word, w['filename']))
+    #print("word %s filename %s" % (full_word, w['filename']))
     found_filenames = mdimporters.mdfind_search_results(full_word)
     matches_expected = [x for x in found_filenames if w['filename'] in x]
     w['matches_expected'] = matches_expected
