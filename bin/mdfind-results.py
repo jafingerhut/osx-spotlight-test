@@ -1,8 +1,11 @@
 #! /usr/bin/env python
 
+from __future__ import print_function
 import json
-import mdimporters
 import sys
+
+import mdimporters
+
 
 # Note: The words are stored separately as 'word_part1' and
 # 'word_part2' so that searching for the entire word will not find the
@@ -20,5 +23,8 @@ for w in maybe_unique_words:
     w['matches_expected'] = matches_expected
     matches_other = [x for x in found_filenames if not (w['filename'] in x)]
     w['matches_other'] = matches_other
+    print("%d %d %s"
+          "" % (len(matches_expected), len(matches_other), w['filename']),
+          file=sys.stderr)
 
 json.dump(maybe_unique_words, sys.stdout, sort_keys=True, indent=2)
