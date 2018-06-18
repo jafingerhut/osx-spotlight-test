@@ -9,6 +9,10 @@ import time
 import mdimporters
 
 
+def delete_test_files(dir_name):
+    subprocess.check_output(['/bin/rm', '-fr', dir_name])
+
+
 def pause(duration_seconds):
     print("Pausing %d seconds..." "" % (duration_seconds))
     time.sleep(duration_seconds)
@@ -48,20 +52,31 @@ search_term = search_term_part1 + search_term_part2
 
 apple_ms_mdimporter = '/Library/Spotlight/Microsoft Office.mdimporter'
 
-github_repo = "https://github.com/jafingerhut/osx-spotlight-test-files"
+dir_name = "osx-spotlight-test-files"
+github_repo = "https://github.com/jafingerhut/" + dir_name
 filename = "osx-spotlight-test-files/MS-Word-for-Mac-version-16.9-Word-Document-docx.docx"
 
-output = subprocess.check_output(['git', 'clone', github_repo])
-# Don't bother checking the output.  Hopefully if there is something
-# bad enough that the command above gives a non-0 exit status, it will
-# abort this program.
-do_search(search_term, filename, pause_duration_sec, "'git clone'")
+for pass_num in [1, 2]:
+    if pass_num == 1:
+        mdimporter_sequence = [None, apple_ms_mdimporter, None]
+    elif pass_num == 2:
+        mdimporter_sequence = [None, apple_ms_mdimporter, apple_ms_mdimporter,
+                               None]
 
-info1 = mdimport("mdimport #1 complete:", filename, None)
-do_search(search_term, filename, pause_duration_sec, "mdimport #1")
+    print("")
+    print("----------------------------------------")
+    print("Start pass #%d" % (pass_num))
 
-info2 = mdimport("mdimport #2 complete:", filename, apple_ms_mdimporter)
-do_search(search_term, filename, pause_duration_sec, "mdimport #2")
+    delete_test_files(dir_name)
+    output = subprocess.check_output(['git', 'clone', github_repo])
+    # Don't bother checking the output.  Hopefully if there is something
+    # bad enough that the command above gives a non-0 exit status, it will
+    # abort this program.
+    do_search(search_term, filename, pause_duration_sec, "'git clone'")
 
-info3 = mdimport("mdimport #3 complete:", filename, None)
-do_search(search_term, filename, pause_duration_sec, "mdimport #3")
+    i = 0
+    for m in mdimporter_sequence:
+        i += 1
+        mdimport("mdimport #%d complete:" % (i), filename, m)
+        do_search(search_term, filename, pause_duration_sec,
+                  "mdimport #%d" % (i))
