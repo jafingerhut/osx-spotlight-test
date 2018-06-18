@@ -17,10 +17,19 @@
 
     {"program_used_to_create_file": {"name": "Microsoft Word for Mac",
                                      "version": "16.9 (180116)"},
-     "save_as_format_name": "Word XML Document (.xml)",
+     "save_as_format_name": "Word 97-2004 Document (.doc)",
      "filename": "MS-Word-for-Mac-version-16.9-Word-97-2004-Document-doc.doc",
      "word_part1": "lowhux",
      "word_part2": "owaachii"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word for Mac",
+                                     "version": "16.9 (180116)"},
+     "save_as_format_name": "Word 97-2004 Document (.doc)",
+     "comment": "After creating file using Word with a .doc suffix in the file name, I used the OSX /bin/mv program to rename it with _no_ 'dot' in its name, so no 'file name suffix' at all.  Its contents are byte-for-byte identical with the file saved by Word.",
+     "filename": "MS-Word-for-Mac-version-16.9-Word-97-2004-Document-doc-no-file-name-suffix",
+     "word_part1": "rufeog",
+     "word_part2": "rodesa"
     },
 
     {"program_used_to_create_file": {"name": "Microsoft Word for Mac",
@@ -62,6 +71,15 @@
      "filename": "MS-Word-for-Mac-version-16.9-Word-Document-docx-suffix-changed-to-txt.txt",
      "word_part1": "epathe",
      "word_part2": "rkagu"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word for Mac",
+                                     "version": "16.9 (180116)"},
+     "save_as_format_name": "Word Document (.docx)",
+     "comment": "After creating file using Word with a .docx suffix in the file name, I used the OSX /bin/mv program to rename it with _no_ 'dot' in its name, so no 'file name suffix' at all.  Its contents are byte-for-byte identical with the file saved by Word.",
+     "filename": "MS-Word-for-Mac-version-16.9-Word-Document-docx-no-file-name-suffix",
+     "word_part1": "voboek",
+     "word_part2": "rirkoboi"
     },
 
     {"program_used_to_create_file": {"name": "Microsoft Excel for Mac",

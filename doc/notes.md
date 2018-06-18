@@ -76,6 +76,33 @@ recorded in any system log?
 When it is saved in Microsoft Word?
 
 
+# UTI (Uniform Type Identifiers)
+
+To see what your Mac thinks the UTI and "UTI hierarchy" is for a
+particular file stored on it, you can run this command (it is just a
+2-line shell script that should modify nothing on your system):
+
+```bash
+./bin/uti-for-file.sh <filename>
+```
+
+The answer describing where the `lsregister` command can be found, and
+how to create a dummy application, seems to be the one with more in
+depth information here:
+
+    https://apple.stackexchange.com/questions/47319/how-can-i-make-os-x-recognize-new-file-extensions
+
+    https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_intro/understand_utis_intro.html
+
+    https://alastairs-place.net/blog/2012/06/06/utis-are-better-than-you-think-and-heres-why/
+
+    https://en.wikipedia.org/wiki/Uniform_Type_Identifier
+
+    https://apple.stackexchange.com/questions/206328/how-to-search-latex-documents-in-spotlight
+
+    https://superuser.com/questions/371892/osx-assign-extension-to-content-kind/371939#371939
+
+
 # Details
 
 My wife has a Mac laptop, and has sometimes noticed that when opening
