@@ -55,12 +55,30 @@
      "word_part2": "inkawu"
     },
 
+    {"program_used_to_create_file": {"name": "Microsoft Word for Mac",
+                                     "version": "16.9 (180116)"},
+     "save_as_format_name": "Word Document (.docx)",
+     "comment": "After creating file using Word with a .docx suffix in the file name, I used the OSX /bin/mv program to rename it with a .txt suffix instead of .docx.  Its contents are byte-for-byte identical with the file saved by Word.",
+     "filename": "MS-Word-for-Mac-version-16.9-Word-Document-docx-suffix-changed-to-txt.txt",
+     "word_part1": "epathe",
+     "word_part2": "rkagu"
+    },
+
     {"program_used_to_create_file": {"name": "Microsoft Excel for Mac",
                                      "version": "16.9 (180116)"},
      "save_as_format_name": "Excel Workbook (.xlsx)",
      "filename": "MS-Excel-for-Mac-version-16.9-Excel-Workbook-xlsx.xlsx",
      "word_part1": "stovoo",
      "word_part2": "keestia"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel for Mac",
+                                     "version": "16.9 (180116)"},
+     "save_as_format_name": "Excel Workbook (.xlsx)",
+     "comment": "After creating file using Excel with a .xlsx suffix in the file name, I used the OSX /bin/mv program to rename it with a .txt suffix instead of .xlsx.  Its contents are byte-for-byte identical with the file saved by Excel.",
+     "filename": "MS-Excel-for-Mac-version-16.9-Excel-Workbook-xlsx-suffix-changed-to-txt.txt",
+     "word_part1": "aashig",
+     "word_part2": "oiliobof"
     },
 
     {"program_used_to_create_file": {"name": "Microsoft Excel for Mac",
