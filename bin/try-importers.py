@@ -1,7 +1,10 @@
-#! /usr/bin/env python3
+#! /usr/bin/env python
 
+from __future__ import print_function
 import os, sys
 import subprocess
+import time
+
 import mdimporters
 
 
@@ -15,14 +18,13 @@ debug = True
 import argparse
 
 
-filename = '/Users/jafinger/Downloads/new word.docx'
-test_search_term = 'yarak'
-
-#filename = '/Users/jafinger/Documents/gni-docs/huff_docs/doc/spec/huff_chipset_spec.doc'
-#test_search_term = 'plesiochronous'
+filename = 'osx-spotlight-test-files/MS-Word-for-Mac-version-16.9-Word-Document-docx.docx'
+test_search_term = 'vorkon' + 'inkawu'
 
 print("Filename: %s" % (filename))
+print("Filename: %s" % (filename), file=sys.stderr)
 print("test search term: %s" % (test_search_term))
+print("test search term: %s" % (test_search_term), file=sys.stderr)
 print("")
 
 mdimporter_lst = mdimporters.get_mdimporters()
@@ -34,15 +36,26 @@ if debug:
         n += 1
 
 # Try doing 'mdimport -d4 -g <mdimporter_name> <filename>' for each
-# mdimporter found.
+# mdimporter found, and also once without specifying an mdimporter, to
+# see what Spotlight uses in that case.
 
-for mdimporter in mdimporter_lst:
-    mdimport_output = subprocess.check_output(['mdimport', '-d4',
-                                               '-g', mdimporter,
-                                               filename],
+for mdimporter in ['(default)'] + mdimporter_lst:
+    args_part1 = ['mdimport', '-d4']
+    if mdimporter == '(default)':
+        args_part2 = []
+    else:
+        args_part2 = ['-g', mdimporter]
+    args_part3 = [filename]
+    all_args = args_part1 + args_part2 + args_part3
+    mdimport_output = subprocess.check_output(all_args,
                                               stderr=subprocess.STDOUT)
     # Assume output of mdimport can be decoded as UTF-8
     mdimport_output = mdimport_output.decode("utf-8")
+
+    # Try waiting 1 second after mdimport to see if it makes 'mdfind'
+    # output more repeatable.
+    time.sleep(1)
+
     # See whether 'mdfind <test_search_term>' output includes the file name
     found_filenames = mdimporters.mdfind_search_results(test_search_term)
     hits = [x for x in found_filenames if filename in x]
@@ -58,3 +71,5 @@ for mdimporter in mdimporter_lst:
         print(x)
     print("mdimport output:")
     print(mdimport_output)
+    print("mdimporter: %s -> %d hits" % (mdimporter, len(hits)),
+          file=sys.stderr)
