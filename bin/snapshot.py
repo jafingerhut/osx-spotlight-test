@@ -25,6 +25,7 @@ def recursive_dir_snapshot(dir_name, f):
     for dir, subdirs, normal_files_in_dir in w:
         lines_out.append('                                 ' +
                          one_file_detail(dir))
+    for dir, subdirs, normal_files_in_dir in w:
         for fname in normal_files_in_dir:
             fullname = dir + '/' + fname
             tmp = (md5sum_of_normal_file(fullname) + ' ' +
