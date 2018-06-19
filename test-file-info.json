@@ -286,7 +286,7 @@
     {"program_used_to_create_file": {"name": "Microsoft Word 2004 for Mac",
                                      "version": "11.6.6 (111104)"},
      "save_as_format_name": "Word Document",
-     "filename": "MS-Word-2004-for-Mac-version-11.6.6-Word-Document-doc.doc",
+     "filename": "MS-Word-2004-for-Mac-version-11-6-6-Word-Document-doc.doc",
      "word_part1": "moscir",
      "word_part2": "ithu"
     },
@@ -295,7 +295,7 @@
                                      "version": "11.6.6 (111104)"},
      "save_as_format_name": "Word Document",
      "comment": "After creating file using Word with a .doc suffix in the file name, I used the OSX /bin/mv program to rename it with _no_ 'dot' in its name, so no 'file name suffix' at all.  Its contents are byte-for-byte identical with the file saved by Word.",
-     "filename": "MS-Word-2004-for-Mac-version-11.6.6-Word-Document-no-file-name-suffix",
+     "filename": "MS-Word-2004-for-Mac-version-11-6-6-Word-Document-no-file-name-suffix",
      "word_part1": "yiabup",
      "word_part2": "hoepo"
     },
@@ -344,8 +344,8 @@
                                      "version": "11.6.6 (111101)"},
      "save_as_format_name": "XML Spreadsheet",
      "filename": "MS-Excel-2004-for-Mac-version-11-6-6-XML-Spreadsheet.xml",
-     "word_part1": "pudreworkeuwi",
-     "word_part2": ""
+     "word_part1": "pudrew",
+     "word_part2": "orkeuwi"
     },
 
     {"program_used_to_create_file": {"name": "Microsoft Excel 2004 for Mac",
