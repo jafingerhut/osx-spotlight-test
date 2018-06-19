@@ -281,6 +281,255 @@
      "filename": "MS-PowerPoint-for-Mac-version-16.9-PowerPoint-Macro-Enabled-Show-ppsm.ppsm",
      "word_part1": "skogha",
      "word_part2": "amiasea"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word 2004 for Mac",
+                                     "version": "11.6.6 (111104)"},
+     "save_as_format_name": "Word Document",
+     "filename": "MS-Word-2004-for-Mac-version-11.6.6-Word-Document-doc.doc",
+     "word_part1": "moscir",
+     "word_part2": "ithu"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word 2004 for Mac",
+                                     "version": "11.6.6 (111104)"},
+     "save_as_format_name": "Word Document",
+     "comment": "After creating file using Word with a .doc suffix in the file name, I used the OSX /bin/mv program to rename it with _no_ 'dot' in its name, so no 'file name suffix' at all.  Its contents are byte-for-byte identical with the file saved by Word.",
+     "filename": "MS-Word-2004-for-Mac-version-11.6.6-Word-Document-no-file-name-suffix",
+     "word_part1": "yiabup",
+     "word_part2": "hoepo"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word 2004 for Mac",
+                                     "version": "11.6.6 (111104)"},
+     "save_as_format_name": "Document Template",
+     "filename": "MS-Word-2004-for-Mac-version-11-6-6-Document-Template.dot",
+     "word_part1": "figaor",
+     "word_part2": "obiba"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word 2004 for Mac",
+                                     "version": "11.6.6 (111104)"},
+     "save_as_format_name": "Rich Text Format (RTF)",
+     "filename": "MS-Word-2004-for-Mac-version-11-6-6-Rich-Text-Format-RTF.rtf",
+     "word_part1": "jeslas",
+     "word_part2": "kerockao"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word 2004 for Mac",
+                                     "version": "11.6.6 (111104)"},
+     "save_as_format_name": "Word Document Stationary",
+     "filename": "MS-Word-2004-for-Mac-version-11-6-6-Word-Document-Stationery.doc",
+     "word_part1": "oslile",
+     "word_part2": "jig"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word 2004 for Mac",
+                                     "version": "11.6.6 (111104)"},
+     "save_as_format_name": "Word 4.0-6.0/95 Compatible (RTF)",
+     "filename": "MS-Word-2004-for-Mac-version-11-6-6-Word-4-0-6-0-95-Compatible-RTF.rtf",
+     "word_part1": "brobud",
+     "word_part2": "ifeofo"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel 2004 for Mac",
+                                     "version": "11.6.6 (111101)"},
+     "save_as_format_name": "Excel Workbook",
+     "filename": "MS-Excel-2004-for-Mac-version-11-6-6-Excel-Workbook.xls",
+     "word_part1": "tohial",
+     "word_part2": "lestookro"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel 2004 for Mac",
+                                     "version": "11.6.6 (111101)"},
+     "save_as_format_name": "XML Spreadsheet",
+     "filename": "MS-Excel-2004-for-Mac-version-11-6-6-XML-Spreadsheet.xml",
+     "word_part1": "pudreworkeuwi",
+     "word_part2": ""
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel 2004 for Mac",
+                                     "version": "11.6.6 (111101)"},
+     "save_as_format_name": "Excel 97-2004 & 5.0/95 Workbook",
+     "filename": "MS-Excel-2004-for-Mac-version-11-6-6-Excel-97-2004-5-0-95-Workbook.xls",
+     "word_part1": "rimude",
+     "word_part2": "kub"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel 2004 for Mac",
+                                     "version": "11.6.6 (111101)"},
+     "save_as_format_name": "Excel 5.0/95 Workbook",
+     "filename": "MS-Excel-2004-for-Mac-version-11-6-6-Excel-5-0-95-Workbook.xls",
+     "word_part1": "upaela",
+     "word_part2": "abrico"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel 2004 for Mac",
+                                     "version": "11.6.6 (111101)"},
+     "save_as_format_name": "Excel 4.0 Workbook",
+     "filename": "MS-Excel-2004-for-Mac-version-11-6-6-Excel-4-0-Workbook.xlw",
+     "word_part1": "oriico",
+     "word_part2": "floopuj"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel 2004 for Mac",
+                                     "version": "11.6.6 (111101)"},
+     "save_as_format_name": "Excel 4.0 Worksheet",
+     "filename": "MS-Excel-2004-for-Mac-version-11-6-6-Excel-4-0-Worksheet.xls",
+     "word_part1": "ustreo",
+     "word_part2": "taebepi"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel 2004 for Mac",
+                                     "version": "11.6.6 (111101)"},
+     "save_as_format_name": "Excel 3.0 Worksheet",
+     "filename": "MS-Excel-2004-for-Mac-version-11-6-6-Excel-3-0-Worksheet.xls",
+     "word_part1": "ecipad",
+     "word_part2": "aun"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel 2004 for Mac",
+                                     "version": "11.6.6 (111101)"},
+     "save_as_format_name": "Excel 2.2 Worksheet",
+     "filename": "MS-Excel-2004-for-Mac-version-11-6-6-Excel-2-2-Worksheet.xls",
+     "word_part1": "assupr",
+     "word_part2": "atrif"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel 2004 for Mac",
+                                     "version": "11.6.6 (111101)"},
+     "save_as_format_name": "WK4 (Lotus 1-2-3)",
+     "filename": "MS-Excel-2004-for-Mac-version-11-6-6-WK4-Lotus-1-2-3.wk4",
+     "word_part1": "akloso",
+     "word_part2": "ojellao"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel 2004 for Mac",
+                                     "version": "11.6.6 (111101)"},
+     "save_as_format_name": "WK3 (Lotus 1-2-3)",
+     "filename": "MS-Excel-2004-for-Mac-version-11-6-6-WK3-Lotus-1-2-3.wk3",
+     "word_part1": "oewuyi",
+     "word_part2": "kal"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel 2004 for Mac",
+                                     "version": "11.6.6 (111101)"},
+     "save_as_format_name": "WK3,FM3 (Lotus 1-2-3)",
+     "filename": "MS-Excel-2004-for-Mac-version-11-6-6-WK3-FM3-Lotus-1-2-3.wk3",
+     "word_part1": "ofloaj",
+     "word_part2": "inouj"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel 2004 for Mac",
+                                     "version": "11.6.6 (111101)"},
+     "save_as_format_name": "WK1,FMT (Lotus 1-2-3)",
+     "filename": "MS-Excel-2004-for-Mac-version-11-6-6-WK1-FMT-Lotus-1-2-3.wk1",
+     "word_part1": "reufno",
+     "word_part2": "det"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel 2004 for Mac",
+                                     "version": "11.6.6 (111101)"},
+     "save_as_format_name": "WK1,ALL (Lotus 1-2-3)",
+     "filename": "MS-Excel-2004-for-Mac-version-11-6-6-WK1-ALL-Lotus-1-2-3.wk1",
+     "word_part1": "ofodru",
+     "word_part2": "teodro"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel 2004 for Mac",
+                                     "version": "11.6.6 (111101)"},
+     "save_as_format_name": "WK1 (Lotus 1-2-3)",
+     "filename": "MS-Excel-2004-for-Mac-version-11-6-6-WK1-Lotus-1-2-3.wk1",
+     "word_part1": "iwathi",
+     "word_part2": "facla"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel 2004 for Mac",
+                                     "version": "11.6.6 (111101)"},
+     "save_as_format_name": "WKS (Lotus 1-2-3)",
+     "filename": "MS-Excel-2004-for-Mac-version-11-6-6-WKS-Lotus-1-2-3.wks",
+     "word_part1": "akeziw",
+     "word_part2": "oz"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel 2004 for Mac",
+                                     "version": "11.6.6 (111101)"},
+     "save_as_format_name": "DBF 4 (dBase IV)",
+     "filename": "MS-Excel-2004-for-Mac-version-11-6-6-DBF-4-dBASE-IV.dbf",
+     "word_part1": "sciagh",
+     "word_part2": "eghiotoes"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel 2004 for Mac",
+                                     "version": "11.6.6 (111101)"},
+     "save_as_format_name": "DBF 3 (dBase III)",
+     "filename": "MS-Excel-2004-for-Mac-version-11-6-6-DBF-3-dBASE-III.dbf",
+     "word_part1": "aihasu",
+     "word_part2": "ckum"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel 2004 for Mac",
+                                     "version": "11.6.6 (111101)"},
+     "save_as_format_name": "DBF 2 (dBase II)",
+     "filename": "MS-Excel-2004-for-Mac-version-11-6-6-DBF-2-dBASE-II.dbf",
+     "word_part1": "eojegh",
+     "word_part2": "udratraj"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel 2004 for Mac",
+                                     "version": "11.6.6 (111101)"},
+     "save_as_format_name": "DIF (Data Interchange Format)",
+     "filename": "MS-Excel-2004-for-Mac-version-11-6-6-DIF-Data-Interchange-Format.dif",
+     "word_part1": "kocrio",
+     "word_part2": "fethuski"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel 2004 for Mac",
+                                     "version": "11.6.6 (111101)"},
+     "save_as_format_name": "SYLK (Symbolic Link)",
+     "filename": "MS-Excel-2004-for-Mac-version-11-6-6-SYLK-Symbolic-Link.slk",
+     "word_part1": "omyzou",
+     "word_part2": "dshoun"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft PowerPoint 2004 for Mac",
+                                     "version": "11.6.4 (110425)"},
+     "save_as_format_name": "PowerPoint Presentation",
+     "filename": "MS-PowerPoint-2004-for-Mac-version-11-6-4-PowerPoint-Presentation.ppt",
+     "word_part1": "gaorah",
+     "word_part2": "esti"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft PowerPoint 2004 for Mac",
+                                     "version": "11.6.4 (110425)"},
+     "save_as_format_name": "PowerPoint Package",
+     "filename": "MS-PowerPoint-2004-for-Mac-version-11-6-4-PowerPoint-Package/MS-PowerPoint-2004-for-Mac-version-11-6-4-PowerPoint-Presentation.ppt",
+     "word_part1": "olenem",
+     "word_part2": "ith"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft PowerPoint 2004 for Mac",
+                                     "version": "11.6.4 (110425)"},
+     "save_as_format_name": "Design Template",
+     "filename": "MS-PowerPoint-2004-for-Mac-version-11-6-4-Design-Template.pot",
+     "word_part1": "phonaa",
+     "word_part2": "sceuno"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft PowerPoint 2004 for Mac",
+                                     "version": "11.6.4 (110425)"},
+     "save_as_format_name": "Outline (Rich Text Format)",
+     "filename": "MS-PowerPoint-2004-for-Mac-version-11-6-4-Outline-Rich-Text-Format.rtf",
+     "word_part1": "bevike",
+     "word_part2": "bob"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft PowerPoint 2004 for Mac",
+                                     "version": "11.6.4 (110425)"},
+     "save_as_format_name": "PowerPoint Show",
+     "filename": "MS-PowerPoint-2004-for-Mac-version-11-6-4-PowerPoint-Show.pps",
+     "word_part1": "feopia",
+     "word_part2": "joskutoe"
     }
 
 ]
