@@ -24,6 +24,13 @@ parser.add_argument('-f', '--file', dest='file',
                     choices=['word-2016-mac-docx',
                              'word-2016-mac-doc'],
                     help="""Specify which file to use in the test.""")
+parser.add_argument('-a', '--arch', dest='arch', type=str,
+                    help="""Use 'arch <arch>' before mdimport command.
+                    Required for my OS X 10.6.8 machine which is
+                    64-bit Intel, but Microsoft mdimporter only has
+                    32-bit Intel and PowerPC binaries, so you must use
+                    options '--arch i386'.""")
+
 args = parser.parse_known_args()[0]
 
 # Note: The search term is written in this code as multiple shorter
@@ -78,7 +85,7 @@ def print_mdimport_results(info):
 
 
 def mdimport(msg, filename, mdimporter_choice):
-    info = mdimporters.do_mdimport(filename, mdimporter_choice)
+    info = mdimporters.do_mdimport(filename, mdimporter_choice, args.arch)
     print(msg)
     print_mdimport_results(info)
     assert filename in info['filename']

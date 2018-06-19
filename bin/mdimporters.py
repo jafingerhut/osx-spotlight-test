@@ -51,14 +51,18 @@ def get_mdimporters(desired_importers):
     return mdimporter_lst
 
 
-def do_mdimport(filename, mdimporter_choice):
+def do_mdimport(filename, mdimporter_choice, arch_option):
+    if arch_option is None:
+        args_part0 = []
+    else:
+        args_part0 = ['arch', '-' + arch_option]
     args_part1 = ['mdimport', '-d4']
     if mdimporter_choice is None or mdimporter_choice == '(default)':
         args_part2 = []
     else:
         args_part2 = ['-g', mdimporter_choice]
     args_part3 = [filename]
-    all_args = args_part1 + args_part2 + args_part3
+    all_args = args_part0 + args_part1 + args_part2 + args_part3
     mdimport_output = subprocess.check_output(all_args,
                                               stderr=subprocess.STDOUT)
     # Assume output of mdimport can be decoded as UTF-8
@@ -73,26 +77,25 @@ def do_mdimport(filename, mdimporter_choice):
     info = {}
     for line in lines:
         #print("dbg: %s" % (line))
-        match = re.match(r"""^.* mdimport.* Attributes: {\s*$""", line)
-        if match:
-            #print("dbg: found Attributes line")
-            found_attributes_start = True
-            break
         match = re.match(r"""(?x) ^
-                             \s* \d+-\d+-\d+
-                             \s+ \d+:\d+:\d+(\.\d+)?
-                             \s+ mdimport \[ \d+ : \d+ \]
+                             .* \s+ mdimport \[ .+ : .+ \]
                              \s+ Imported \s+ ' (?P<filename>.+) '
-                             \s+ of \s+ type
-                             \s+ ' (?P<uti>.+) '
-                             \s+ with \s+ plugIn
-                             \s+ (?P<mdimporter>.+)
-                             \. $""", line)
+                             \s+ of \s+ type \s+ ' (?P<uti>.+) '
+                             \s+ with \s+ plugIn \s+ (?P<mdimporter>.+)
+                             \. \s* $""", line)
         if match:
             #print("dbg: found info line")
             info['filename'] = match.group('filename')
             info['uti'] = match.group('uti')
             info['mdimporter'] = match.group('mdimporter')
+            continue
+
+        match = re.match(r"""^.* mdimport.* Attributes: {\s*$""", line)
+        if match:
+            #print("dbg: found Attributes line")
+            found_attributes_start = True
+            break
+
     assert found_attributes_start
     assert 'filename' in info
     return info
