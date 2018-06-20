@@ -127,10 +127,33 @@ for pass_num in [1, 2, 3, 4, 5, 6]:
     # Don't bother checking the output.  Hopefully if there is something
     # bad enough that the command above gives a non-0 exit status, it will
     # abort this program.
-    do_search(search_term, filename, pause_duration_sec, "'git clone'",
-              os.path.join(output_dir_name,
-                           ("pass-%d-mdls-after-git-clone.txt" % (pass_num))))
 
+    # I do not know how to check whether all of a certain set of
+    # recently created files are complete in their addition to the
+    # Spotlight indexes.  I would be interested in knowing how to do
+    # that, if it is reasonably straightforward.
+
+    # So far I have occasionally seen different search success/fail
+    # results 10 seconds after doing 'git clone' on my
+    # osx-spotlight-test-files repository.  My guess is that this is
+    # because sometimes it is done indexing those files, vs. sometimes
+    # it is not yet done.  The other most likely explanation is that
+    # the indexing process was done in both cases, but the results of
+    # that indexing were different after different 'git clone'
+    # operations, which is more disturbing.
+
+    # For now, allow more time after the 'git clone' before starting
+    # to run 'mdimport' commands that might change the index, to see
+    # if the search results become more consistent across runs by
+    # waiting longer.
+    i = 0
+    for tries in range(10):
+        i += 1
+        do_search(search_term, filename, pause_duration_sec,
+                  ("'git clone' #%d" % (i)),
+                  os.path.join(output_dir_name,
+                               ("pass-%d-mdls-%d-after-git-clone.txt"
+                                "" % (pass_num, i))))
     i = 0
     for m in mdimporter_sequence:
         i += 1
