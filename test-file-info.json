@@ -487,6 +487,86 @@
      "word_part2": "iraoclith"
     },
 
+    {"program_used_to_create_file": {"name": "Microsoft PowerPoint for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "PowerPoint Presentation (.pptx)",
+     "filename": "MS-PowerPoint-for-Mac-2011-version-14-7-7-PowerPoint-Presentation-pptx.pptx",
+     "word_part1": "eaunim",
+     "word_part2": "ophoglugh"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft PowerPoint for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "PowerPoint 97-2004 Presentation (.ppt)",
+     "filename": "MS-PowerPoint-for-Mac-2011-version-14-7-7-PowerPoint-97-2004-Presentation-ppt.ppt",
+     "word_part1": "bedeka",
+     "word_part2": "peau"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft PowerPoint for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "PowerPoint Template (.potx)",
+     "filename": "MS-PowerPoint-for-Mac-2011-version-14-7-7-PowerPoint-Template-potx.potx",
+     "word_part1": "orafli",
+     "word_part2": "vywou"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft PowerPoint for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "PowerPoint 97-2004 Template (.pot)",
+     "filename": "MS-PowerPoint-for-Mac-2011-version-14-7-7-PowerPoint-97-2004-Template-pot.pot",
+     "word_part1": "tutheb",
+     "word_part2": "oogebri"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft PowerPoint for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "PowerPoint Show (.ppsx)",
+     "filename": "MS-PowerPoint-for-Mac-2011-version-14-7-7-PowerPoint-Show-ppsx.ppsx",
+     "word_part1": "queref",
+     "word_part2": "roslu"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft PowerPoint for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "PowerPoint 97-2004 Show (.pps)",
+     "filename": "MS-PowerPoint-for-Mac-2011-version-14-7-7-PowerPoint-97-2004-Show-pps.pps",
+     "word_part1": "okifaz",
+     "word_part2": "arkag"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft PowerPoint for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "PowerPoint Macro-Enabled Presentation (.pptm)",
+     "filename": "MS-PowerPoint-for-Mac-2011-version-14-7-7-PowerPoint-Macro-Enabled-Presentation-pptm.pptm",
+     "word_part1": "avibri",
+     "word_part2": "kaibu"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft PowerPoint for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "PowerPoint Macro-Enabled Template (.potm)",
+     "filename": "MS-PowerPoint-for-Mac-2011-version-14-7-7-PowerPoint-Macro-Enabled-Template-potm.potm",
+     "word_part1": "aefosc",
+     "word_part2": "izowhew"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft PowerPoint for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "PowerPoint Macro-Enabled Show (.ppsm)",
+     "filename": "MS-PowerPoint-for-Mac-2011-version-14-7-7-PowerPoint-Macro-Enabled-Show-ppsm.ppsm",
+     "word_part1": "afreeh",
+     "word_part2": "odraun"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft PowerPoint for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Outline / Rich Text Format (.rtf)",
+     "filename": "MS-PowerPoint-for-Mac-2011-version-14-7-7-Outline-Rich-Text-Format-rtf.rtf",
+     "word_part1": "kareav",
+     "word_part2": "ecuske"
+    },
+
     {"program_used_to_create_file": {"name": "Microsoft Word 2004 for Mac",
                                      "version": "11.6.6 (111104)"},
      "save_as_format_name": "Word Document",
