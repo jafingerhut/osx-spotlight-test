@@ -283,6 +283,114 @@
      "word_part2": "amiasea"
     },
 
+    {"program_used_to_create_file": {"name": "Microsoft Word for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Word Document (.docx)",
+     "filename": "MS-Word-for-Mac-2011-version-14-7-7-Word-Document-docx.docx",
+     "word_part1": "fobach",
+     "word_part2": "etil"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Word Document (.docx)",
+     "comment": "After creating file using Word with a .docx suffix in the file name, I used the OSX /bin/mv program to rename it with a .txt suffix instead of .docx.  Its contents are byte-for-byte identical with the file saved by Word.",
+     "filename": "MS-Word-for-Mac-2011-version-14-7-7-Word-Document-docx-suffix-changed-to-txt.txt",
+     "word_part1": "wakroi",
+     "word_part2": "kuvoir"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Word Document (.docx)",
+     "filename": "MS-Word-for-Mac-version-16.9-Word-97-2004-Document-doc-no-file-name-suffix",
+     "comment": "After creating file using Word with a .docx suffix in the file name, I used the OSX /bin/mv program to rename it with _no_ 'dot' in its name, so no 'file name suffix' at all.  Its contents are byte-for-byte identical with the file saved by Word.",
+     "filename": "MS-Word-for-Mac-2011-version-14-7-7-Word-Document-docx-no-file-name-suffix",
+     "word_part1": "iskogr",
+     "word_part2": "ugrip"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Word 97-2004 Document (.doc)",
+     "filename": "MS-Word-for-Mac-2011-version-14-7-7-Word-97-2004-Document-doc.doc",
+     "word_part1": "ciwhip",
+     "word_part2": "leatuglo"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Word 97-2004 Document (.doc)",
+     "comment": "After creating file using Word with a .doc suffix in the file name, I used the OSX /bin/mv program to rename it with _no_ 'dot' in its name, so no 'file name suffix' at all.  Its contents are byte-for-byte identical with the file saved by Word.",
+     "filename": "MS-Word-for-Mac-2011-version-14-7-7-Word-97-2004-Document-doc-no-file-name-suffix",
+     "word_part1": "pegrol",
+     "word_part2": "araur"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Word Template (.dotx)",
+     "filename": "MS-Word-for-Mac-2011-version-14-7-7-Word-Template-dotx.dotx",
+     "word_part1": "abroof",
+     "word_part2": "likashash"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Word 97-2004 Template (.dot)",
+     "filename": "MS-Word-for-Mac-2011-version-14-7-7-Word-97-2004-Template-dot.dot",
+     "word_part1": "fekrob",
+     "word_part2": "ecy"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Word Macro-Enabled Document (.docm)",
+     "filename": "MS-Word-for-Mac-2011-version-14-7-7-Word-Macro-Enabled-Document-docm.docm",
+     "word_part1": "oonafr",
+     "word_part2": "eglabre"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Word Macro-Enabled Template (.dotm)",
+     "filename": "MS-Word-for-Mac-2011-version-14-7-7-Word-Macro-Enabled-Template-dotm.dotm",
+     "word_part1": "foprel",
+     "word_part2": "emuf"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Word XML Document (.xml)",
+     "filename": "MS-Word-for-Mac-2011-version-14-7-7-Word-XML-Document-xml.xml",
+     "word_part1": "huwide",
+     "word_part2": "kakoa"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Word 2003 XML Document (.xml)",
+     "filename": "MS-Word-for-Mac-2011-version-14-7-7-Word-2003-XML-Document-xml.xml",
+     "word_part1": "ipapha",
+     "word_part2": "aplor"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Word Document Stationery (.doc)",
+     "filename": "MS-Word-for-Mac-2011-version-14-7-7-Word-Document-Stationery-doc.doc",
+     "word_part1": "ithoic",
+     "word_part2": "egovaul"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Word 4.0-6.0/95 Compatible (.rtf)",
+     "filename": "MS-Word-for-Mac-2011-version-14-7-7-Word-4-0-6-0-95-Compatible-rtf.rtf",
+     "word_part1": "doisca",
+     "word_part2": "oshiudre"
+    },
+
     {"program_used_to_create_file": {"name": "Microsoft Word 2004 for Mac",
                                      "version": "11.6.6 (111104)"},
      "save_as_format_name": "Word Document",
