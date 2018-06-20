@@ -391,6 +391,102 @@
      "word_part2": "oshiudre"
     },
 
+    {"program_used_to_create_file": {"name": "Microsoft Excel for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Excel Workbook (.xlsx)",
+     "filename": "MS-Excel-for-Mac-2011-version-14-7-7-Excel-Workbook-xlsx.xlsx",
+     "word_part1": "iarofr",
+     "word_part2": "ankireac"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Excel 97-2004 Workbook (.xls)",
+     "filename": "MS-Excel-for-Mac-2011-version-14-7-7-Excel-97-2004-Workbook-xls.xls",
+     "word_part1": "rascik",
+     "word_part2": "ucho"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Excel Template (.xltx)",
+     "filename": "MS-Excel-for-Mac-2011-version-14-7-7-Excel-Template-xltx.xltx",
+     "word_part1": "agaklo",
+     "word_part2": "upliti"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Excel 97-2004 Template (.xlt)",
+     "filename": "MS-Excel-for-Mac-2011-version-14-7-7-Excel-97-2004-Template-xlt.xlt",
+     "word_part1": "edriph",
+     "word_part2": "epoah"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Comma Separated Values (.csv)",
+     "filename": "MS-Excel-for-Mac-2011-version-14-7-7-Comma-Separated-Values-csv.csv",
+     "word_part1": "obrosl",
+     "word_part2": "egrewee"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Excel Binary Workbook (.xlsb)",
+     "filename": "S-Excel-for-Mac-2011-version-14-7-7-Excel-Binary-Workbook-xlsb.xlsb",
+     "word_part1": "gadoig",
+     "word_part2": "rucosc"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Excel Macro-Enabled Workbook (.xlsm)",
+     "filename": "MS-Excel-for-Mac-2011-version-14-7-7-Excel-Macro-Enabled-Workbook-xlsm.xlsm",
+     "word_part1": "biiloo",
+     "word_part2": "frifej"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Excel Macro-Enabled Template (.xltm)",
+     "filename": "MS-Excel-for-Mac-2011-version-14-7-7-Excel-Macro-Enabled-Template-xltm.xltm",
+     "word_part1": "fabuxo",
+     "word_part2": "nkev"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Excel 2004 XML Spreadsheet (.xml)",
+     "filename": "MS-Excel-for-Mac-2011-version-14-7-7-Excel-2004-XML-Spreadsheet-xml.xml",
+     "word_part1": "drocle",
+     "word_part2": "slajibru"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Data Interchange Format (.dif)",
+     "filename": "MS-Excel-for-Mac-2011-version-14-7-7-Data-Interchange-Format-dif.dif",
+     "word_part1": "ajaceh",
+     "word_part2": "ucku"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Symbolic Link (.slk)",
+     "filename": "MS-Excel-for-Mac-2011-version-14-7-7-Symbolic-Link-slk.slk",
+     "word_part1": "aetefu",
+     "word_part2": "dymeash"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Excel for Mac 2011",
+                                     "version": "14.7.7 (170905)"},
+     "save_as_format_name": "Excel 5.0/95 Workbook (.xls)",
+     "filename": "MS-Excel-for-Mac-2011-version-14-7-7-Excel-5-0-95-Workbook-xls.xls",
+     "word_part1": "aiphit",
+     "word_part2": "iraoclith"
+    },
+
     {"program_used_to_create_file": {"name": "Microsoft Word 2004 for Mac",
                                      "version": "11.6.6 (111104)"},
      "save_as_format_name": "Word Document",
