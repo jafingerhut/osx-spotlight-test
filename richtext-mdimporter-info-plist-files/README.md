@@ -1,8 +1,14 @@
 File: original-Info.plist
 
-This a copy of this file that was installed on multiple different Mac
-OSX systems I own, running several different versions of Mac OSX,
-including:
+This a copy of the file:
+
+    /System/Library/Spotlight/RichText.mdimporter/Contents/Info.plist
+
+that was installed on two Mac OSX 10.12.6 systems I own.  This file
+has changed version numbers and a few other small things from a Mac
+OSX 10.6.8 and OSX 10.11.6 system I also own, but they all have the
+same contents within the key CFBundleDocumentTypes, including
+org.openxmlformats.wordprocessingml.document.
 
 
 File: modified-Info.plist
