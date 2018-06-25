@@ -195,10 +195,17 @@ web page to disable, then later re-enable, SIP:
 
     https://discussions.apple.com/thread/8373095
 
-The directory `richtext-mdimporter-info-plist-files` contains copies
-of the original version of the OSX 10.12.6 RichText Info.plist file
-that was on my system, as well as the modified one that I used for
-this group of tests.
+I didn't intentionally change anything else on the system, and I was
+being quite careful about these things.  I am sure some files in
+`/tmp` and system logs were changed, but no configurations, OSX
+version, Microsoft Office version, or other similar things were
+changed.
+
+The directory
+[`richtext-mdimporter-info-plist-files`](../richtext-mdimporter-info-plist-files)
+contains copies of the original version of the OSX 10.12.6 RichText
+Info.plist file that was on my system, as well as the modified one
+that I used for this group of tests.
 
 The results reported below use the same test sequence as those above,
 with the one difference that every time I ran `mdimport -d1 foo.docx`
@@ -229,11 +236,9 @@ re-enabled SIP:
 
     /System/Library/Spotlight/RichText.mdimporter/Contents/Info.plist
 
-I didn't intentionally change anything else on the system, and I was
-being quite careful about these things.  I am sure some files in
-`/tmp` and system logs were changed, but no configurations, OSX
-version, Microsoft Office version, or other similar things were
-changed.
+I used `diff` to verify that my restored Info.plist file was identical
+to the copy of the original file contents that I saved, before
+modifying it.
 
 The results reported below use the same test sequence as those above.
 The mdimporter reported when I ran the command `mdimport -d1 foo.docx`
