@@ -1,3 +1,5 @@
+# Introduction
+
 Note: All test results were performed on a system with very light CPU
 and memory load.  The average CPU load was under 10% for the entire
 duration of the tests, as shown by Apple's Activity Monitor.
@@ -9,53 +11,7 @@ you click on the Spotlight icon near the right of the top of screen
 menu bar, and type any search term.
 
 
-# Test results group 1
-
-+ MacBook Pro running OSX 10.12.6
-+ Microsoft Word for Mac Version 16.9 (180116)
-
-All mdimporters are listed below, and as installed by Apple,
-Microsoft, and/or the creator of the mdimporter, with no custom
-modifications.
-
-```
-$ mdimport -L
-2018-06-24 20:23:30.046 mdimport[2561:1144325] Paths: id(501) (
-    "/Library/Spotlight/iBooksAuthor.mdimporter",
-    "/Library/Spotlight/iWork.mdimporter",
-    "/Library/Spotlight/Microsoft Office.mdimporter",
-    "/System/Library/Spotlight/Application.mdimporter",
-    "/System/Library/Spotlight/Archives.mdimporter",
-    "/System/Library/Spotlight/Audio.mdimporter",
-    "/System/Library/Spotlight/Automator.mdimporter",
-    "/System/Library/Spotlight/Bookmarks.mdimporter",
-    "/System/Library/Spotlight/Chat.mdimporter",
-    "/System/Library/Spotlight/CoreMedia.mdimporter",
-    "/System/Library/Spotlight/Font.mdimporter",
-    "/System/Library/Spotlight/iCal.mdimporter",
-    "/System/Library/Spotlight/Image.mdimporter",
-    "/System/Library/Spotlight/iPhoto.mdimporter",
-    "/System/Library/Spotlight/iPhoto8.mdimporter",
-    "/System/Library/Spotlight/Mail.mdimporter",
-    "/System/Library/Spotlight/MIDI.mdimporter",
-    "/System/Library/Spotlight/Notes.mdimporter",
-    "/System/Library/Spotlight/PDF.mdimporter",
-    "/System/Library/Spotlight/PS.mdimporter",
-    "/System/Library/Spotlight/QuartzComposer.mdimporter",
-    "/System/Library/Spotlight/RichText.mdimporter",
-    "/System/Library/Spotlight/SystemPrefs.mdimporter",
-    "/System/Library/Spotlight/vCard.mdimporter",
-    "/Applications/GarageBand.app/Contents/Library/Spotlight/GarageBandSpotlightImporter.mdimporter",
-    "/Applications/GarageBand.app/Contents/Library/Spotlight/LogicX_MDImport.mdimporter",
-    "/Applications/Microsoft Outlook.app/Contents/Library/Spotlight/Microsoft Outlook Spotlight Importer.mdimporter",
-    "/Applications/Mindjet MindManager.app/Contents/Library/Spotlight/MindManager.mdimporter",
-    "/Applications/OmniGraffle.app/Contents/Library/Spotlight/OmniGraffle.mdimporter",
-    "/Applications/Thunderbird.app/Contents/Library/Spotlight/thunderbird.mdimporter",
-    "/Applications/Xcode.app/Contents/Library/Spotlight/uuid.mdimporter",
-    "/Applications/LibreOffice.app/Contents/Library/Spotlight/OOoSpotlightImporter.mdimporter",
-    "/Applications/Xcode.app/Contents/Applications/Application Loader.app/Contents/Library/Spotlight/MZSpotlight.mdimporter"
-)
-```
+# Description of test sequence used
 
 I will use "term" as a shortened form of "search term".  You can use
 any sequence of letters that you want, but I prefer to use made-up
@@ -64,7 +20,6 @@ system I am testing with, so I get either no results, or the one
 document that I expect the term to occur in.
 
 One such made-up word is "oleasterich".
-
 
 Test sequence:
 
@@ -124,6 +79,55 @@ Continuing from step 6 above:
     foo.docx disappeared from search results within a couple of
     seconds.
 14. Quit Word.  Deleted file.
+
+
+# Test results group 1
+
++ MacBook Pro running OSX 10.12.6
++ Microsoft Word for Mac Version 16.9 (180116)
+
+All mdimporters are listed below, and as installed by Apple,
+Microsoft, and/or the creator of the mdimporter, with no custom
+modifications.
+
+```
+$ mdimport -L
+2018-06-24 20:23:30.046 mdimport[2561:1144325] Paths: id(501) (
+    "/Library/Spotlight/iBooksAuthor.mdimporter",
+    "/Library/Spotlight/iWork.mdimporter",
+    "/Library/Spotlight/Microsoft Office.mdimporter",
+    "/System/Library/Spotlight/Application.mdimporter",
+    "/System/Library/Spotlight/Archives.mdimporter",
+    "/System/Library/Spotlight/Audio.mdimporter",
+    "/System/Library/Spotlight/Automator.mdimporter",
+    "/System/Library/Spotlight/Bookmarks.mdimporter",
+    "/System/Library/Spotlight/Chat.mdimporter",
+    "/System/Library/Spotlight/CoreMedia.mdimporter",
+    "/System/Library/Spotlight/Font.mdimporter",
+    "/System/Library/Spotlight/iCal.mdimporter",
+    "/System/Library/Spotlight/Image.mdimporter",
+    "/System/Library/Spotlight/iPhoto.mdimporter",
+    "/System/Library/Spotlight/iPhoto8.mdimporter",
+    "/System/Library/Spotlight/Mail.mdimporter",
+    "/System/Library/Spotlight/MIDI.mdimporter",
+    "/System/Library/Spotlight/Notes.mdimporter",
+    "/System/Library/Spotlight/PDF.mdimporter",
+    "/System/Library/Spotlight/PS.mdimporter",
+    "/System/Library/Spotlight/QuartzComposer.mdimporter",
+    "/System/Library/Spotlight/RichText.mdimporter",
+    "/System/Library/Spotlight/SystemPrefs.mdimporter",
+    "/System/Library/Spotlight/vCard.mdimporter",
+    "/Applications/GarageBand.app/Contents/Library/Spotlight/GarageBandSpotlightImporter.mdimporter",
+    "/Applications/GarageBand.app/Contents/Library/Spotlight/LogicX_MDImport.mdimporter",
+    "/Applications/Microsoft Outlook.app/Contents/Library/Spotlight/Microsoft Outlook Spotlight Importer.mdimporter",
+    "/Applications/Mindjet MindManager.app/Contents/Library/Spotlight/MindManager.mdimporter",
+    "/Applications/OmniGraffle.app/Contents/Library/Spotlight/OmniGraffle.mdimporter",
+    "/Applications/Thunderbird.app/Contents/Library/Spotlight/thunderbird.mdimporter",
+    "/Applications/Xcode.app/Contents/Library/Spotlight/uuid.mdimporter",
+    "/Applications/LibreOffice.app/Contents/Library/Spotlight/OOoSpotlightImporter.mdimporter",
+    "/Applications/Xcode.app/Contents/Applications/Application Loader.app/Contents/Library/Spotlight/MZSpotlight.mdimporter"
+)
+```
 
 + Try  1: bad results
 + Try  2: good results
