@@ -82,68 +82,69 @@ Test sequence:
    "foo.docx" with the default file name extension added by Word.
    Click Save button to save.
 5. Left the Word document open.
+6. Examine the search results for the search term, either via `mdfind`
+   command in Terminal, via the Finder window created in step 0, or
+   both.
 
 From this point, I saw three different variations for what happened
 next.
 
-6a. Soon after saving the document, foo.docx was found by a Spotlight
-    search, both in the Finder window kept open for that purpose, and
-    via the `mdfind` command in Terminal.  Continue with step 7a
-    below.
-
-6b. Within 60 seconds after saving the document, foo.docx was never
-    found by a Spotlight search, neither in a Finder window, nor via
-    `mdfind` command in Terminal.  Continue with step 7b below.
-
-6c. foo.docx was displayed as a matching result in a Finder window,
-    but only for a few seconds, then it disappeared, and it did not
-    return within 60 seconds after saving the document.  It did not
-    show up at that time via `mdfind` command, either.  Continue with
-    step 7b below.
++ "good results" - Soon after saving the document, foo.docx was found
+  by a Spotlight search, both in the Finder window kept open for that
+  purpose, and via the `mdfind` command in Terminal.  Continue with
+  step 7 below.
++ "bad results" - Within 60 seconds after saving the document,
+  foo.docx was never found by a Spotlight search, neither in a Finder
+  window, nor via `mdfind` command in Terminal.  Continue with step 11
+  below.
++ "bad results, with brief but temporary good results" - foo.docx was
+  displayed as a matching result in a Finder window, but only for a
+  few seconds, then it disappeared, and it did not return within 60
+  seconds after saving the document.  It did not show up at that time
+  via `mdfind` command, either.  Continue with step 11 below.
 
 Continuing from step 6a above:
 
-7a. In Terminal ran `mdimport -d1 foo.docx`.  The mdimporter reported
-    was: `/System/Library/Spotlight/RichText.mdimporter`.  foo.docx
-    still showed up in Spotlight results.
-8a. Closed Word document.  Still in search results.
-9a. Opened Word document.  Still in search results.
-10a.  Quit Word.  Deleted file.
+7. In Terminal ran `mdimport -d1 foo.docx`.  The mdimporter reported
+   was: `/System/Library/Spotlight/RichText.mdimporter`.  foo.docx
+   still showed up in Spotlight results.
+8. Closed Word document.  Still in search results.
+9. Opened Word document.  Still in search results.
+10.  Quit Word.  Deleted file.
 
 Continuing from step 6b or 6c above:
 
-7b. In Terminal ran `mdimport -d1 foo.docx`.  The mdimporter reported
+11. In Terminal ran `mdimport -d1 foo.docx`.  The mdimporter reported
     was: `/System/Library/Spotlight/RichText.mdimporter`.  foo.docx
     showed up in Spotlight results within seconds.
-8b. Closed document window in Word.  Still in search results.
-9b. Opened foo.docx again in Word.  I merely opened the document so
+12. Closed document window in Word.  Still in search results.
+13. Opened foo.docx again in Word.  I merely opened the document so
     the window containing its text appeared.  I did not modify the
     content, save it, or anything other than open the document.
     foo.docx disappeared from search results within a couple of
     seconds.
-10b.  Quit Word.  Deleted file.
+14. Quit Word.  Deleted file.
 
-Try  1: Sequence #4 took path b.
-Try  2: Sequence #4 took path a.
-Try  3: Sequence #4 took path b.
-Try  4: Sequence #4 took path b.
-Try  5: Sequence #4 took path b.
-Try  6: Sequence #4 took path a.
-Try  7: Sequence #4 took path a.
-Try  8: Sequence #4 took path a.
-Try  9: Sequence #4 took path a.
-Try 10: Sequence #4 took path a.
-
-Try 11: Sequence #4 took path a (shortened version where I stopped at step 6a after foo.docx showed up in search results, then jumped to 10a.)
-Try 12: Sequence #4 took path a (same as try 11)
-Try 13: Sequence #4 took path a (same as try 11)
-Try 14: Sequence #4 took path a (same as try 11)
-Try 15: Sequence #4 took path a (same as try 11)
-Try 16: Sequence #4 took path a (same as try 11)
-Try 17: Sequence #4 took path b (file name was fo.docx by accident this time)
-Try 18: Sequence #4 took path a (same as try 11)
-Try 19: Sequence #4 took path b
-Try 20: Sequence #4 took path b, except foo.docx showed up in search results for a few seconds after saving the document, before it disappeared and stayed that way for 60 seconds after saving.
++ Try  1: bad results
++ Try  2: good results
++ Try  3: bad results
++ Try  4: bad results
++ Try  5: bad results
++ Try  6: good results
++ Try  7: good results
++ Try  8: good results
++ Try  9: good results
++ Try 10: good results
++ Try 11: good results (shortened version where I stopped at step 6a after foo.docx showed up in search results, then jumped to 10a.)
++ Try 12: good results (same as try 11)
++ Try 13: good results (same as try 11)
++ Try 14: good results (same as try 11)
++ Try 15: good results (same as try 11)
++ Try 16: good results (same as try 11)
++ Try 17: bad results (file name was fo.docx by accident this time)
++ Try 18: good results (same as try 11)
++ Try 19: bad results
++ Try 20: bad results, with brief but temporary good results
 
 
 # Test results group 2
@@ -157,16 +158,16 @@ the time, which was this:
 
 Microsoft Word for Mac Version 16.14.1 (180613)
 
-Try  1: Sequence #4 took path b
-Try  2: Sequence #4 took path b, except foo.docx showed up in search results for a few seconds after saving the document, before it disappeared and stayed that way for 60 seconds after saving.
-Try  3: Sequence #4 took path b
-Try  4: Sequence #4 took path b
-Try  5: Sequence #4 took path a
-Try  6: Sequence #4 took path b, except foo.docx showed up in search results for a few seconds after saving the document, before it disappeared and stayed that way for 60 seconds after saving.
-Try  7: Sequence #4 took path b, except foo.docx showed up in search results for a few seconds after saving the document, before it disappeared and stayed that way for 60 seconds after saving.
-Try  8: Sequence #4 took path a
-Try  9: Sequence #4 took path a
-Try 10: Sequence #4 took path a
++ Try  1: bad results
++ Try  2: bad results, with brief but temporary good results
++ Try  3: bad results
++ Try  4: bad results
++ Try  5: good results
++ Try  6: bad results, with brief but temporary good results
++ Try  7: bad results, with brief but temporary good results
++ Try  8: good results
++ Try  9: good results
++ Try 10: good results
 
 
 # Test results group 3
@@ -206,16 +207,16 @@ in a Terminal, the mdimporter that was reported as used was this one:
 I believe this change is because of how I changed the RichText
 Info.plist file.
 
-Try  1: Sequence #4 took path a
-Try  2: Sequence #4 took path a
-Try  3: Sequence #4 took path a
-Try  4: Sequence #4 took path a
-Try  5: Sequence #4 took path a
-Try  6: Sequence #4 took path a
-Try  7: Sequence #4 took path a
-Try  8: Sequence #4 took path a
-Try  9: Sequence #4 took path a
-Try 10: Sequence #4 took path a
++ Try  1: good results
++ Try  2: good results
++ Try  3: good results
++ Try  4: good results
++ Try  5: good results
++ Try  6: good results
++ Try  7: good results
++ Try  8: good results
++ Try  9: good results
++ Try 10: good results
 
 
 # Test results group 4
@@ -236,13 +237,13 @@ in a Terminal was back to its original:
 
     /System/Library/Spotlight/RichText.mdimporter
 
-Try  1: Sequence #4 took path b
-Try  2: Sequence #4 took path b
-Try  3: Sequence #4 took path b
-Try  4: Sequence #4 took path b
-Try  5: Sequence #4 took path b
-Try  6: Sequence #4 took path b
-Try  7: Sequence #4 took path b
-Try  8: Sequence #4 took path b
-Try  9: Sequence #4 took path b
-Try 10: Sequence #4 took path b
++ Try  1: bad results
++ Try  2: bad results
++ Try  3: bad results
++ Try  4: bad results
++ Try  5: bad results
++ Try  6: bad results
++ Try  7: bad results
++ Try  8: bad results
++ Try  9: bad results
++ Try 10: bad results
