@@ -100,8 +100,8 @@ next.
 Continuing from step 6a above:
 
 7a. In Terminal ran "mdimport -d1 foo.docx".  The mdimporter reported
-    was: "/System/Library/Spotlight/RichText.mdimporter". foo still
-    showed up in Spotlight results.
+    was: "/System/Library/Spotlight/RichText.mdimporter".  foo.docx
+    still showed up in Spotlight results.
 8a. Closed Word document.  Still in search results.
 9a. Opened Word document.  Still in search results.
 10a.  Quit Word.  Deleted file.
@@ -109,11 +109,14 @@ Continuing from step 6a above:
 Continuing from step 6b or 6c above:
 
 7b. In Terminal ran "mdimport -d1 foo.docx".  The mdimporter reported
-    was: "/System/Library/Spotlight/RichText.mdimporter". foo.docx
+    was: "/System/Library/Spotlight/RichText.mdimporter".  foo.docx
     showed up in Spotlight results within seconds.
 8b. Closed document window in Word.  Still in search results.
-9b. Opened foo.docx again in Word.  foo.docx disappeared from search
-    results within a couple of seconds.
+9b. Opened foo.docx again in Word.  I merely opened the document so
+    the window containing its text appeared.  I did not modify the
+    content, save it, or anything other than open the document.
+    foo.docx disappeared from search results within a couple of
+    seconds.
 10b.  Quit Word.  Deleted file.
 
 Try  1: Sequence #4 took path b.
@@ -127,7 +130,7 @@ Try  8: Sequence #4 took path a.
 Try  9: Sequence #4 took path a.
 Try 10: Sequence #4 took path a.
 
-Try 11: Sequence #4 took path a (shortened version where I stopped at step 6a after foo showed up in search results, then jumped to 10a.)
+Try 11: Sequence #4 took path a (shortened version where I stopped at step 6a after foo.docx showed up in search results, then jumped to 10a.)
 Try 12: Sequence #4 took path a (same as try 11)
 Try 13: Sequence #4 took path a (same as try 11)
 Try 14: Sequence #4 took path a (same as try 11)
@@ -223,3 +226,19 @@ some files in /tmp and system logs were changed, but no
 configurations, OSX version, Microsoft Office version, or other
 similar things were changed.
 
+The results reported below use the same test sequence as those above.
+The mdimporter reported when I ran the command 'mdimport -d1 foo.docx'
+in a Terminal was back to its original:
+
+    /System/Library/Spotlight/RichText.mdimporter
+
+Try  1: Sequence #4 took path b
+Try  2: Sequence #4 took path b
+Try  3: Sequence #4 took path b
+Try  4: Sequence #4 took path b
+Try  5: Sequence #4 took path b
+Try  6: Sequence #4 took path b
+Try  7: Sequence #4 took path b
+Try  8: Sequence #4 took path b
+Try  9: Sequence #4 took path b
+Try 10: Sequence #4 took path b
