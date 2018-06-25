@@ -11,8 +11,8 @@ menu bar, and type any search term.
 
 # Test results group 1
 
-MacBook Pro running OSX 10.12.6
-Microsoft Word for Mac Version 16.9 (180116)
++ MacBook Pro running OSX 10.12.6
++ Microsoft Word for Mac Version 16.9 (180116)
 
 All mdimporters are listed below, and as installed by Apple,
 Microsoft, and/or the creator of the mdimporter, with no custom
@@ -57,9 +57,6 @@ $ mdimport -L
 )
 ```
 
-urestr aph
-ankewy nuglugh
-
 I will use "term" as a shortened form of "search term".  You can use
 any sequence of letters that you want, but I prefer to use made-up
 sequences of letters that do not appear in other documents on the
@@ -69,38 +66,45 @@ document that I expect the term to occur in.
 One such made-up word is "oleasterich".
 
 
-Sequence #4
+Test sequence:
 
-1. Start Word, when there is no file foo.docx in some folder
-2. File -> New Document
+0. Pick a folder in which to save a new document, one that has no file
+   named foo.docx in it already.  A folder newly created for testing
+   purposes is good.  Also open a new window in Finder, and enter the
+   search term in the text box near the upper right of the window.
+   Leave this window open and visible during the tests so you can
+   watch as its search results change (or not).
+1. Start Word
+2. Select menu item File -> New Document
 3. Enter text "oleasterich"
-4. File -> Save As.  Leave File format as the default "Word Document
-   (.docx)".  Named the file "foo", which becomes "foo.docx" with the
-   default file name extension added by Word.  Clicked Save button to
-   save.
+4. Select menu item File -> Save As.  Leave File format as the default
+   "Word Document (.docx)".  Named the file "foo", which becomes
+   "foo.docx" with the default file name extension added by Word.
+   Click Save button to save.
 5. Left the Word document open.
 
 From this point, I saw three different variations for what happened
 next.
 
 6a. Soon after saving the document, foo.docx was found by a Spotlight
-    search, both in a Finder window kept open for that purpose, and
-    via mdfind command in Terminal.  Continue with step 7a below.
+    search, both in the Finder window kept open for that purpose, and
+    via the `mdfind` command in Terminal.  Continue with step 7a
+    below.
 
 6b. Within 60 seconds after saving the document, foo.docx was never
     found by a Spotlight search, neither in a Finder window, nor via
-    mdfind command in Terminal.  Continue with step 7b below.
+    `mdfind` command in Terminal.  Continue with step 7b below.
 
 6c. foo.docx was displayed as a matching result in a Finder window,
     but only for a few seconds, then it disappeared, and it did not
     return within 60 seconds after saving the document.  It did not
-    show up at that time via mdfind command, either.  Continue with
+    show up at that time via `mdfind` command, either.  Continue with
     step 7b below.
 
 Continuing from step 6a above:
 
-7a. In Terminal ran "mdimport -d1 foo.docx".  The mdimporter reported
-    was: "/System/Library/Spotlight/RichText.mdimporter".  foo.docx
+7a. In Terminal ran `mdimport -d1 foo.docx`.  The mdimporter reported
+    was: `/System/Library/Spotlight/RichText.mdimporter`.  foo.docx
     still showed up in Spotlight results.
 8a. Closed Word document.  Still in search results.
 9a. Opened Word document.  Still in search results.
@@ -108,8 +112,8 @@ Continuing from step 6a above:
 
 Continuing from step 6b or 6c above:
 
-7b. In Terminal ran "mdimport -d1 foo.docx".  The mdimporter reported
-    was: "/System/Library/Spotlight/RichText.mdimporter".  foo.docx
+7b. In Terminal ran `mdimport -d1 foo.docx`.  The mdimporter reported
+    was: `/System/Library/Spotlight/RichText.mdimporter`.  foo.docx
     showed up in Spotlight results within seconds.
 8b. Closed document window in Word.  Still in search results.
 9b. Opened foo.docx again in Word.  I merely opened the document so
@@ -194,7 +198,7 @@ that was on my system, as well as the modified one that I used for
 this group of tests.
 
 The results reported below use the same test sequence as those above,
-with the one difference that every time I ran 'mdimport -d1 foo.docx'
+with the one difference that every time I ran `mdimport -d1 foo.docx`
 in a Terminal, the mdimporter that was reported as used was this one:
 
     /Library/Spotlight/Microsoft Office.mdimporter
@@ -227,7 +231,7 @@ configurations, OSX version, Microsoft Office version, or other
 similar things were changed.
 
 The results reported below use the same test sequence as those above.
-The mdimporter reported when I ran the command 'mdimport -d1 foo.docx'
+The mdimporter reported when I ran the command `mdimport -d1 foo.docx`
 in a Terminal was back to its original:
 
     /System/Library/Spotlight/RichText.mdimporter
