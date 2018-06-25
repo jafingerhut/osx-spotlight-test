@@ -103,7 +103,7 @@ next.
   seconds after saving the document.  It did not show up at that time
   via `mdfind` command, either.  Continue with step 11 below.
 
-Continuing from step 6a above:
+Continuing from step 6 above:
 
 7. In Terminal ran `mdimport -d1 foo.docx`.  The mdimporter reported
    was: `/System/Library/Spotlight/RichText.mdimporter`.  foo.docx
@@ -112,7 +112,7 @@ Continuing from step 6a above:
 9. Opened Word document.  Still in search results.
 10.  Quit Word.  Deleted file.
 
-Continuing from step 6b or 6c above:
+Continuing from step 6 above:
 
 11. In Terminal ran `mdimport -d1 foo.docx`.  The mdimporter reported
     was: `/System/Library/Spotlight/RichText.mdimporter`.  foo.docx
@@ -135,7 +135,7 @@ Continuing from step 6b or 6c above:
 + Try  8: good results
 + Try  9: good results
 + Try 10: good results
-+ Try 11: good results (shortened version where I stopped at step 6a after foo.docx showed up in search results, then jumped to 10a.)
++ Try 11: good results (shortened version where I stopped at step 6 after foo.docx showed up in search results, then jumped to step 10.)
 + Try 12: good results (same as try 11)
 + Try 13: good results (same as try 11)
 + Try 14: good results (same as try 11)
