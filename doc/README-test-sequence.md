@@ -149,14 +149,13 @@ Continuing from step 6 above:
 
 # Test results group 2
 
-On same computer, remained at this version of OSX:
+On same computer, remained at same version of OSX, but updated to
+latest version of Microsoft Office for Mac available at the time,
+shown below:
 
-MacBook Pro running OSX 10.12.6
++ MacBook Pro running OSX 10.12.6
++ Microsoft Word for Mac Version 16.14.1 (180613)
 
-but updated to latest version of Microsoft Office for Mac available at
-the time, which was this:
-
-Microsoft Word for Mac Version 16.14.1 (180613)
 
 + Try  1: bad results
 + Try  2: bad results, with brief but temporary good results
@@ -174,8 +173,8 @@ Microsoft Word for Mac Version 16.14.1 (180613)
 
 On same computer:
 
-MacBook Pro running OSX 10.12.6
-Microsoft Word for Mac Version 16.14.1 (180613)
++ MacBook Pro running OSX 10.12.6
++ Microsoft Word for Mac Version 16.14.1 (180613)
 
 I hand-edited my copy of this file:
 
@@ -185,11 +184,10 @@ to remove this line:
 
     <string>org.openxmlformats.wordprocessingml.document</string>
 
-Because the file is in the /System directory, I had to follow these
-instructions to disable SIP.  I re-enabled SIP after modifying the
-file.  I _did not modify any other files in the system_.  I used
-instructions included on this web page to disable, then later
-re-enable, SIP:
+Because the file is in the /System directory, I had to first disable
+SIP.  I re-enabled SIP after modifying the file.  I _did not modify
+any other files in the system_.  I used instructions included on this
+web page to disable, then later re-enable, SIP:
 
     https://discussions.apple.com/thread/8373095
 
@@ -222,14 +220,16 @@ Info.plist file.
 # Test results group 4
 
 This is the same system as group 3 above, except that I disabled SIP,
-restored this file to its original contents, then re-enabled SIP:
+restored the RichText Info.plist file to its original contents, then
+re-enabled SIP:
 
     /System/Library/Spotlight/RichText.mdimporter/Contents/Info.plist
 
-I didn't intentionally change anything else on the system.  I am sure
-some files in /tmp and system logs were changed, but no
-configurations, OSX version, Microsoft Office version, or other
-similar things were changed.
+I didn't intentionally change anything else on the system, and I was
+being quite careful about these things.  I am sure some files in
+`/tmp` and system logs were changed, but no configurations, OSX
+version, Microsoft Office version, or other similar things were
+changed.
 
 The results reported below use the same test sequence as those above.
 The mdimporter reported when I ran the command `mdimport -d1 foo.docx`
