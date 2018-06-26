@@ -29,8 +29,14 @@ computers, several have asked about the issue, and others have
 attempted to learn what is going worng, and proposed changes to their
 systems that might improve the situation.
 
+    https://discussions.apple.com/thread/8373095
+
     https://discussions.apple.com/thread/7368240
     https://discussions.apple.com/thread/7937137
+
+    https://discussions.apple.com/thread/4765960
+    https://discussions.apple.com/thread/7724825
+    https://discussions.apple.com/thread/7968524
 
     https://superuser.com/questions/1214883/why-is-apple-spotlight-not-finding-contents-of-docx
     https://word.uservoice.com/forums/304942-word-for-mac/suggestions/10998114-apple-s-spotlight-can-t-find-word-docx-files
