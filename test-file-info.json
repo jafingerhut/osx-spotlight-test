@@ -857,6 +857,22 @@
      "filename": "/Volumes/osx-spotlight-test-files-disk-image/MS-Word-for-Mac-version-16-14-1-Word-97-2004-Document-doc-suffix-changed-to-docx.docx",
      "word_part1": "fallal",
      "word_part2": "olitai"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word for Mac",
+                                     "version": "Office 365 16.14.1 (180613)"},
+     "save_as_format_name": "Word Document (.docx)",
+     "filename": "/Volumes/osx-spotlight-test-files-disk-image/MS-Word-for-Mac-Office-365-16-14-1-Word-Document-docx.docx",
+     "word_part1": "kewehi",
+     "word_part2": "onkejoe"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word for Mac",
+                                     "version": "Office 365 16.14.1 (180613)"},
+     "save_as_format_name": "Word 97-2004 Document (.doc)",
+     "filename": "/Volumes/osx-spotlight-test-files-disk-image/MS-Word-for-Mac-Office-365-16-14-1-Word-97-2004-Document-doc.doc",
+     "word_part1": "veabro",
+     "word_part2": "zica"
     }
 
 ]
