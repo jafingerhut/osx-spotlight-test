@@ -349,7 +349,7 @@ $ grep openxmlformats.wordprocessingml.document /Library/Spotlight/Microsoft\ Of
 
 # Test results group 6
 
-On same computer (a VM) as "Test results group 5", but
+On same computer (a VM) as "Test results group 5":
 
 + OSX 10.13.5 running in a VMware Fusion VM on a MacBook Pro
 + Microsoft Word for Mac Version 16.14.1 (180613) installed via Office 365
@@ -383,3 +383,37 @@ Info.plist file.
 + Try  8: good results
 + Try  9: good results
 + Try 10: good results
+
+
+# Test results group 7
+
+On same computer (a VM) as "Test results group 5" and "Test results
+group 6":
+
++ OSX 10.13.5 running in a VMware Fusion VM on a MacBook Pro
++ Microsoft Word for Mac Version 16.14.1 (180613) installed via Office 365
+
+I restored the contents of this file:
+
+    /System/Library/Spotlight/RichText.mdimporter/Contents/Info.plist
+
+back to its original contents (byte for byte identical according
+to `diff` output), after doing the experiments in "Test results
+group 6".  I rebooted after restoring the file to its original
+contents, and re-enabling SIP.
+
++ Try  1: good results
++ Try  2: good results
++ Try  3: good results
++ Try  4: good results
++ Try  5: good results
++ Try  6: good results
++ Try  7: good results
++ Try  8: good results
++ Try  9: good results
++ Try 10: good results
+
+I have no guesses as to why the results are so consistently good
+here.  The output of every `mdimport -d1 foo.docx` command was back
+to showing RichText as the mdimporter used, as it was for "Test
+results group 5".
