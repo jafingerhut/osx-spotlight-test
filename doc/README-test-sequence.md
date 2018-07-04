@@ -345,3 +345,41 @@ $ grep openxmlformats.wordprocessingml.document /Library/Spotlight/Microsoft\ Of
 + Try  8: good results
 + Try  9: bad results variant 2
 + Try 10: bad results
+
+
+# Test results group 6
+
+On same computer (a VM) as "Test results group 5", but
+
++ OSX 10.13.5 running in a VMware Fusion VM on a MacBook Pro
++ Microsoft Word for Mac Version 16.14.1 (180613) installed via Office 365
+
+I hand-edited my copy of this file:
+
+    /System/Library/Spotlight/RichText.mdimporter/Contents/Info.plist
+
+to remove this line:
+
+    <string>org.openxmlformats.wordprocessingml.document</string>
+
+similarly to how I did so as described in "Test results group 3".
+
+The results reported below use the same test sequence as those above,
+with the one difference that every time I ran `mdimport -d1 foo.docx`
+in a Terminal, the mdimporter that was reported as used was this one:
+
+    /Library/Spotlight/Microsoft Office.mdimporter
+
+I believe this change is because of how I changed the RichText
+Info.plist file.
+
++ Try  1: good results
++ Try  2: good results
++ Try  3: good results
++ Try  4: good results
++ Try  5: good results
++ Try  6: good results
++ Try  7: good results
++ Try  8: good results
++ Try  9: good results
++ Try 10: good results
