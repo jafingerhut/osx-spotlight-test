@@ -814,6 +814,49 @@
      "filename": "MS-PowerPoint-2004-for-Mac-version-11-6-4-PowerPoint-Show.pps",
      "word_part1": "feopia",
      "word_part2": "joskutoe"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word for Mac",
+                                     "version": "16.14.1 (180613)"},
+     "save_as_format_name": "Word Document (.docx)",
+     "filename": "/Volumes/osx-spotlight-test-files-disk-image/MS-Word-for-Mac-version-16-14-1-Word-Document-docx.docx",
+     "word_part1": "aslopu",
+     "word_part2": "fohih"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word for Mac",
+                                     "version": "16.14.1 (180613)"},
+     "save_as_format_name": "Word Document (.docx)",
+     "comment": "After creating file using Word with a .docx suffix in the file name, I used the OSX /bin/mv program to rename it with a .txt suffix instead of .docx.  Its contents are byte-for-byte identical with the file saved by Word.",
+     "filename": "/Volumes/osx-spotlight-test-files-disk-image/MS-Word-for-Mac-version-16-14-1-Word-Document-docx-suffix-changed-to-txt.txt",
+     "word_part1": "uwhoto",
+     "word_part2": "nkog"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word for Mac",
+                                     "version": "16.14.1 (180613)"},
+     "save_as_format_name": "Word Document (.docx)",
+     "comment": "After creating file using Word with a .docx suffix in the file name, I used the OSX /bin/mv program to rename it with a .doc suffix instead of .docx.  Its contents are byte-for-byte identical with the file saved by Word.",
+     "filename": "/Volumes/osx-spotlight-test-files-disk-image/MS-Word-for-Mac-version-16-14-1-Word-Document-docx-suffix-changed-to-doc.doc",
+     "word_part1": "egrafr",
+     "word_part2": "icoajun"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word for Mac",
+                                     "version": "16.14.1 (180613)"},
+     "save_as_format_name": "Word 97-2004 Document (.doc)",
+     "filename": "/Volumes/osx-spotlight-test-files-disk-image/MS-Word-for-Mac-version-16-14-1-Word-97-2004-Document-doc.doc",
+     "word_part1": "buraam",
+     "word_part2": "acheepu"
+    },
+
+    {"program_used_to_create_file": {"name": "Microsoft Word for Mac",
+                                     "version": "16.14.1 (180613)"},
+     "save_as_format_name": "Word 97-2004 Document (.doc)",
+     "comment": "After creating file using Word with a .doc suffix in the file name, I used the OSX /bin/mv program to rename it with a .docx suffix instead of .doc.  Its contents are byte-for-byte identical with the file saved by Word.",
+     "filename": "/Volumes/osx-spotlight-test-files-disk-image/MS-Word-for-Mac-version-16-14-1-Word-97-2004-Document-doc-suffix-changed-to-docx.docx",
+     "word_part1": "fallal",
+     "word_part2": "olitai"
     }
 
 ]
