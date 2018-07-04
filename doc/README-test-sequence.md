@@ -41,7 +41,7 @@ Test sequence:
    command in Terminal, via the Finder window created in step 0, or
    both.
 
-From this point, I saw three different variations for what happened
+From this point, I saw several different variations for what happened
 next.
 
 + "good results" - Soon after saving the document, foo.docx was found
@@ -57,6 +57,11 @@ next.
   few seconds, then it disappeared, and it did not return within 60
   seconds after saving the document.  It did not show up at that time
   via `mdfind` command, either.  Continue with step 11 below.
++ "bad results variant 2" - This begins like the "good results"
+  sequence, but the file disappears from the Spotlight search results
+  after opening the document in Word in step 9 below.
++ "bad results variant 3" - Begins like "bad results" above, but I
+  got different search results after step 13 below.
 
 Continuing from step 6 above:
 
@@ -64,7 +69,14 @@ Continuing from step 6 above:
    was: `/System/Library/Spotlight/RichText.mdimporter`.  foo.docx
    still showed up in Spotlight results.
 8. Closed Word document.  Still in search results.
-9. Opened Word document.  Still in search results.
+9. Opened Word document.
+
+From here I saw two different results.  One I call "good results"
+where the file was still in the search results after opening the
+document in Word.  The other I call "bad results variant 2" where
+the file disappeared from the search results after opening the
+document in Word.  In either case, continue with step 10 below.
+
 10.  Quit Word.  Deleted file.
 
 Continuing from step 6 above:
@@ -76,8 +88,14 @@ Continuing from step 6 above:
 13. Opened foo.docx again in Word.  I merely opened the document so
     the window containing its text appeared.  I did not modify the
     content, save it, or anything other than open the document.
-    foo.docx disappeared from search results within a couple of
-    seconds.
+
+From here I saw two different results.  One I call "bad results
+variant 3" where the file was still in the search results after
+opening the document in Word.  The other I call "bad results" where
+the file disappeared from the search results after opening the
+document in Word, within a couple of seconds.  In either case,
+continue with step 14 below.
+
 14. Quit Word.  Deleted file.
 
 
@@ -255,4 +273,75 @@ in a Terminal was back to its original:
 + Try  7: bad results
 + Try  8: bad results
 + Try  9: bad results
++ Try 10: bad results
+
+
+# Test results group 5
+
++ OSX 10.13.5 running in a VMware Fusion VM on a MacBook Pro
++ Microsoft Word for Mac Version 16.14.1 (180613) installed via Office 365
+
+Note that in this OSX install, there is _no_ software installed on
+the system other than what comes with a fresh OSX install (of OSX
+10.12, then use the App Store to upgrade to OSX 10.13, then update
+to all updates available as of 2018-Jul-04), plus Microsoft Office
+for Mac that I installed via Office 365 on 2018-Jul-04.
+
+All mdimporters are listed below, and as installed by Apple,
+Microsoft, and/or the creator of the mdimporter, with no custom
+modifications.
+
+```
+$ mdimport -L
+2018-07-04 13:55:13.158 mdimport[4848:35046] Paths: id(501) (
+    "/Library/Spotlight/iWork.mdimporter",
+    "/Library/Spotlight/Microsoft Office.mdimporter",
+    "/Library/Spotlight/iBooksAuthor.mdimporter",
+    "/System/Library/Spotlight/SystemPrefs.mdimporter",
+    "/System/Library/Spotlight/Chat.mdimporter",
+    "/System/Library/Spotlight/iPhoto.mdimporter",
+    "/System/Library/Spotlight/PDF.mdimporter",
+    "/System/Library/Spotlight/RichText.mdimporter",
+    "/System/Library/Spotlight/Bookmarks.mdimporter",
+    "/System/Library/Spotlight/PS.mdimporter",
+    "/System/Library/Spotlight/MIDI.mdimporter",
+    "/System/Library/Spotlight/Archives.mdimporter",
+    "/System/Library/Spotlight/Audio.mdimporter",
+    "/System/Library/Spotlight/iPhoto8.mdimporter",
+    "/System/Library/Spotlight/Automator.mdimporter",
+    "/System/Library/Spotlight/Application.mdimporter",
+    "/System/Library/Spotlight/Font.mdimporter",
+    "/System/Library/Spotlight/Mail.mdimporter",
+    "/System/Library/Spotlight/QuartzComposer.mdimporter",
+    "/System/Library/Spotlight/vCard.mdimporter",
+    "/System/Library/Spotlight/Image.mdimporter",
+    "/System/Library/Spotlight/iCal.mdimporter",
+    "/System/Library/Spotlight/CoreMedia.mdimporter",
+    "/Applications/Microsoft Outlook.app/Contents/Library/Spotlight/Microsoft Outlook Spotlight Importer.mdimporter"
+)
+```
+
+In particular, both the RichText and Microsoft Office mdimporters
+both contained the UTI type name
+`org.openxmlformats.wordprocessingml.document`, as shown by the
+following commands:
+
+```
+$ grep openxmlformats.wordprocessingml.document /System/Library/Spotlight/RichText.mdimporter/Contents/Info.plist 
+				<string>org.openxmlformats.wordprocessingml.document</string>
+
+$ grep openxmlformats.wordprocessingml.document /Library/Spotlight/Microsoft\ Office.mdimporter/Contents/Info.plist 
+				<string>org.openxmlformats.wordprocessingml.document</string>
+				<string>org.openxmlformats.wordprocessingml.document.macroenabled</string>
+```
+
++ Try  1: bad results
++ Try  2: bad results variant 2
++ Try  3: bad results variant 3
++ Try  4: bad results variant 2
++ Try  5: bad results variant 3
++ Try  6: good results
++ Try  7: bad results
++ Try  8: good results
++ Try  9: bad results variant 2
 + Try 10: bad results
