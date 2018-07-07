@@ -417,3 +417,22 @@ I have no guesses as to why the results are so consistently good
 here.  The output of every `mdimport -d1 foo.docx` command was back
 to showing RichText as the mdimporter used, as it was for "Test
 results group 5".
+
+
+
+# Reporting of these results
+
+I have tried officially reporting these results to both Apple and
+Microsoft, but neglected to write down the details of where exactly on
+their web sites I reported them.  I will add those details here if I
+find them.
+
+2018-Jul-07: I responded to a discussion on a Microsoft web site
+[here](https://word.uservoice.com/forums/304942-word-for-mac/suggestions/10998114-apple-s-spotlight-can-t-find-word-docx-files),
+linking to these test results, and I voted on the issue.  Please vote
+on the issue yourself if you are interested having a Microsoft
+developer examine the issue more carefully, and perhaps correct it.
+
+I found that issue by going to the main page for Microsoft Word's
+Suggestion box [here](https://word.uservoice.com), and searching for
+the term "spotlight".
