@@ -419,6 +419,153 @@ to showing RichText as the mdimporter used, as it was for "Test
 results group 5".
 
 
+# Test results group 8
+
++ OSX 10.11.6 running on an MacBook Pro, 15-inch Early 2008 model
++ Microsoft Word for Mac Version 16.14.1 (180613) installed via Office 365
+
+All mdimporters are listed below, and as installed by Apple,
+Microsoft, and/or the creator of the mdimporter, with no custom
+modifications.
+
+```
+$ mdimport -L
+2018-07-07 16:04:42.481 mdimport[10826:308648] Paths: id(501) (
+    "/Library/Spotlight/iBooksAuthor.mdimporter",
+    "/Library/Spotlight/iWork.mdimporter",
+    "/Library/Spotlight/Microsoft Office.mdimporter",
+    "/System/Library/Spotlight/Application.mdimporter",
+    "/System/Library/Spotlight/Archives.mdimporter",
+    "/System/Library/Spotlight/Audio.mdimporter",
+    "/System/Library/Spotlight/Automator.mdimporter",
+    "/System/Library/Spotlight/Bookmarks.mdimporter",
+    "/System/Library/Spotlight/Chat.mdimporter",
+    "/System/Library/Spotlight/CoreMedia.mdimporter",
+    "/System/Library/Spotlight/Font.mdimporter",
+    "/System/Library/Spotlight/iCal.mdimporter",
+    "/System/Library/Spotlight/Image.mdimporter",
+    "/System/Library/Spotlight/iPhoto.mdimporter",
+    "/System/Library/Spotlight/iPhoto8.mdimporter",
+    "/System/Library/Spotlight/Mail.mdimporter",
+    "/System/Library/Spotlight/MIDI.mdimporter",
+    "/System/Library/Spotlight/Notes.mdimporter",
+    "/System/Library/Spotlight/PDF.mdimporter",
+    "/System/Library/Spotlight/PS.mdimporter",
+    "/System/Library/Spotlight/QuartzComposer.mdimporter",
+    "/System/Library/Spotlight/RichText.mdimporter",
+    "/System/Library/Spotlight/SystemPrefs.mdimporter",
+    "/System/Library/Spotlight/vCard.mdimporter",
+    "/Applications/Xcode.app/Contents/Library/Spotlight/uuid.mdimporter",
+    "/Applications/Xcode.app/Contents/Applications/Application Loader.app/Contents/Library/Spotlight/MZSpotlight.mdimporter",
+    "/Applications/LibreOffice.app/Contents/Library/Spotlight/OOoSpotlightImporter.mdimporter",
+    "/Applications/Microsoft Outlook.app/Contents/Library/Spotlight/Microsoft Outlook Spotlight Importer.mdimporter"
+)
+```
+
+In particular, both the RichText and Microsoft Office mdimporters
+both contained the UTI type name
+`org.openxmlformats.wordprocessingml.document`, as shown by the
+following commands:
+
+```
+$ grep openxmlformats.wordprocessingml.document /System/Library/Spotlight/RichText.mdimporter/Contents/Info.plist 
+				<string>org.openxmlformats.wordprocessingml.document</string>
+
+$ grep openxmlformats.wordprocessingml.document /Library/Spotlight/Microsoft\ Office.mdimporter/Contents/Info.plist 
+				<string>org.openxmlformats.wordprocessingml.document</string>
+				<string>org.openxmlformats.wordprocessingml.document.macroenabled</string>
+```
+
+Note: I believe that all of the earlier test result groups, I had
+configured the bottom left of the Save window in Microsoft Word to
+uncheck the box labeled "Hide extension".  In these first 10 tries
+below, that check box was checked, so although I know that the file
+had a '.docx' extension when saved in the file system, because I ran
+terminal commands with that suffix and it was present in the file
+name, the suffix did not show up in the save or open windows in
+Microsoft Word.  I do not know whether that might make a difference in
+the results, so the next group of tries after the first 10 I will
+change that setting.
+
++ Try  1: bad results variant 3
++ Try  2: bad results variant 3
++ Try  3: bad results variant 3
++ Try  4: bad results variant 3
++ Try  5: bad results variant 3
++ Try  6: bad results variant 3
++ Try  7: bad results variant 3
++ Try  8: bad results variant 3
++ Try  9: bad results variant 3
++ Try 10: bad results variant 3
+
+At this point, I turned off the checkbox in Microsoft Word's Save
+window next to "Hide Extension".  The .docx suffix now showed up in
+both the Save and Open windows.
+
++ Try  1: bad results variant 3
++ Try  2: bad results variant 3
++ Try  3: bad results variant 3
++ Try  4: bad results variant 3
++ Try  5: bad results variant 3
+
+
+# Test results group 9
+
+On same computer as "Test results group 8":
+
++ OSX 10.11.6 running on an MacBook Pro, 15-inch Early 2008 model
++ Microsoft Word for Mac Version 16.14.1 (180613) installed via Office 365
+
+I hand-edited my copy of this file:
+
+    /System/Library/Spotlight/RichText.mdimporter/Contents/Info.plist
+
+to remove this line:
+
+    <string>org.openxmlformats.wordprocessingml.document</string>
+
+similarly to how I did so as described in "Test results group 3".
+
+The results reported below use the same test sequence as those above.
+
+NOTE: Unlike the other cases above where I changed RichText's
+Info.plist file in this same way, every time I ran `mdimport -d1
+foo.docx` in _this_ group of tests, I still saw that the mdimporter
+was reported as RichText, not the Microsoft Office importer.  I do not
+know why this difference occurred.
+
+I do not know if it makes any difference, but one difference besides
+the version of OSX used was that in the following test sequences, I
+left the system in a state where SIP was disabled.  I will try again
+later with SIP enabled.
+
+    /System/Library/Spotlight/RichText.mdimporter
+
++ Try  1: good results
++ Try  2: good results
++ Try  3: good results
++ Try  4: good results
++ Try  5: good results
+
+I decided to be a bit lazy and only repeat the sequence 5 times
+instead of 10 here.  All results were good, with no variations.
+
+
+I tried again after re-enabling SIP, and got the following results.
+RichText was still the mdimporter used by every mdimport command I
+ran.
+
++ Try  1: good results
++ Try  2: good results
++ Try  3: bad results variant 3
++ Try  4: good results
++ Try  5: good results
++ Try  6: good results
++ Try  7: good results
++ Try  8: good results
++ Try  9: good results
++ Try 10: good results
+
 
 # Reporting of these results
 
