@@ -567,6 +567,49 @@ ran.
 + Try 10: good results
 
 
+# Test results group 10
+
+On same computer as "Test results group 8", except Office 365 was
+updated, then system shut down and booted again:
+
++ OSX 10.11.6 running on an MacBook Pro, 15-inch Early 2008 model
++ Microsoft Word for Mac Version 16.15 (180709) installed via Office 365
+
+The RichText mdimporter Info.plist file was still in its modified
+state as descried in "Test results group 9".
+
+The `mdimport -d1 foo.docx` command reported the Microsoft Office
+mdimporter this time:
+
+    /Library/Spotlight/Microsoft Office.mdimporter
+
++ Try  1: good results
++ Try  2: good results
++ Try  3: good results
++ Try  4: good results
++ Try  5: good results
+
+
+# Test results group 11
+
+On same computer as "Test results group 8", with Office 365 updated as
+described in "Test results group 10".
+
++ OSX 10.11.6 running on an MacBook Pro, 15-inch Early 2008 model
++ Microsoft Word for Mac Version 16.15 (180709) installed via Office 365
+
+Also, I have disabled SIP, restored the following file to its original
+contents, enabled SIP, and rebooted after enabling SIP.
+
+    /System/Library/Spotlight/RichText.mdimporter/Contents/Info.plist
+
++ Try  1: good results
++ Try  2: good results
++ Try  3: good results
++ Try  4: good results
++ Try  5: good results
+
+
 # Reporting of these results
 
 I have tried officially reporting these results to both Apple and
