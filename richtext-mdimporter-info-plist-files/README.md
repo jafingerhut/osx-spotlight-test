@@ -1,4 +1,4 @@
-File: original-Info.plist
+File: osx-10.12.6-original-Info.plist
 
 This a copy of the file:
 
@@ -11,10 +11,10 @@ same contents within the key CFBundleDocumentTypes, including
 org.openxmlformats.wordprocessingml.document.
 
 
-File: modified-Info.plist
+File: osx-10.12.6-modified-Info.plist
 
-This is the same as original-Info.plist, but has the following line,
-line 24 in original-Info.plist, deleted:
+This is the same as osx-10.12.6-original-Info.plist, but has the
+following line, line 24 in osx-10.12.6-original-Info.plist, deleted:
 
 ```
 <string>org.openxmlformats.wordprocessingml.document</string>
