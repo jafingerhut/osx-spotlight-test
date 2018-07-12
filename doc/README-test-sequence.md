@@ -223,10 +223,11 @@ Whether you ended at step 10 or step 14, after deleting the document,
 it should not appear in the search results window afterward.
 
 If you want to send me results that I can collect and report to
-Microsoft and/or Apple, it should look like the following example,
+Microsoft and/or Apple, they should look like the following example,
 except customized for your particular system and the results that you
-observed.  See below the sample output for how to find out the version
-numbers for your system.
+observed.  Send them to me via email at `andy.fingerhut@gmail.com`.
+See below the sample output for how to find out the version numbers
+for your system.
 
 ```
 Operating system version: 10.12.6
