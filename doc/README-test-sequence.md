@@ -1,5 +1,16 @@
 # Introduction
 
+This document is for recording results of a particular test sequence
+that on several Macs I have tried it on, demonstrates incorrect search
+results from Spotlight for Microsoft Word documents.
+
+If you would like to help draw the attention of a Microsoft developer
+to the problem, hopefully someone that can determine the root cause
+and have it fixed, please create a free account on Microsoft's "user
+voice" web site
+[here](https://word.uservoice.com/forums/304942-word-for-mac/suggestions/10998114-apple-s-spotlight-can-t-find-word-docx-files),
+and vote on the issue.
+
 Note: All test results were performed on a system with very light CPU
 and memory load.  The average CPU load was under 10% for the entire
 duration of the tests, as shown by Apple's Activity Monitor.
@@ -241,6 +252,9 @@ consecutive tries on several systems, oddly enough.  If you repeated
 the test multiple times and want to include all of the results you
 observed, simply add a separate line for each test result you saw, in
 the order you saw them.
+
+You can stop reading here, unless you are interested in the gory
+details of the test results that I recorded on several Macs of mine.
 
 
 # Test results group 1
