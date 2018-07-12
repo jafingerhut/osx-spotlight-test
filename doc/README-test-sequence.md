@@ -13,90 +13,224 @@ menu bar, and type any search term.
 
 # Description of test sequence used
 
-I will use "term" as a shortened form of "search term".  You can use
-any sequence of letters that you want, but I prefer to use made-up
-sequences of letters that do not appear in other documents on the
-system I am testing with, so I get either no results, or the one
-document that I expect the term to occur in.
+This test sequence is only relevant if you have a Mac with at least
+Microsoft Word and PowerPoint installed on it.
 
-One such made-up word is "oleasterich".
+Setup:
+
+S1. Quit all or at least most applications on your system.
+
+S2. Click on the Spotlight search icon on the right side of your menu
+    bar near the top right of your screen.  It looks like a small hand
+    held magnifying glass.  Enter a word that you expect to be found
+    in some documents saved on your system, e.g. "time".  If you see
+    "Indexing" with a progress bar next to it immediately beneath the
+    search term you typed, then your system has not completed
+    Spotlight indexing.  Wait until it is finished before running this
+    test.
+
+S3. Start the Activity Monitor program to verify that your system is
+    mostly idle.  In a Finder window, go to the Applications folder.
+    Inside of it, find the folder named "Utilities" and open that.
+    Inside of the "Utilities" folder, find the application called
+    "Activity Monitor" and start it.  A new window will appear with
+    "Activity Monitor" near the top.  There should be several buttons
+    beneath that labeled "CPU", "Memory", "Energy", "Disk", and
+    "Network".  Click the "CPU" button.  Near the bottom left of the
+    window you should see the words "System:", "User:", and "Idle:".
+    Percentage numbers next to those words should be updating every
+    few seconds.  If the number next to "Idle:" is usually "85%" or
+    higher, proceed.  If it is consistently less than that, see if
+    there are any applications still running on your system that you
+    forgot to quit.
+
+S4. Pick a folder in which to save a new document.  I will use
+    "Documents" for this example, but as with all folder names, file
+    names, and search terms in this test sequence, customize it to
+    whatever you want.  I would be surprised if these choices affect
+    the results in any significant way.
+
+S5. Pick a file name to save in that folder that does not already
+    exist as a Microsoft Word or PowerPoint document there.  I will
+    use "foop" for this example.  Choose a name with only letters in
+    it, i.e. no spaces, digits, or other non-letter characters (this
+    makes it straightforward to type it in one of the test sequence
+    steps later).  Choose a name that is _different_ than the search
+    term you select in the next step.  We want to test whether
+    Spotlight can find a file based on a word in the document's
+    _content_, not based on the name of the file.
+
+S6. In Finder, select the menu item "File -> New Finder Window", and
+    in the text box near the top right of the Finder window that says
+    "Search" inside of it, enter a made-up word that you don't expect
+    to exist in any documents on your computer already.  In my case, I
+    used the made up non-word `oleasterich` as my search term, and
+    when I type that search term, no documents show up in the search
+    results.  Just keep adding more arbitrary letters until the search
+    results show no documents.  I will call this window the "search
+    results window" below.  If you can, position this window on your
+    screen somewhere where you can always see at least the top few
+    lines of the search results, if not the entire window.  You will
+    be checking what documents appear in this search results window
+    several times during the test.
+
+S7. Start the Terminal application.  In the same Utilities folder
+    where you found Activity Monitor in step S3, find the application
+    called "Terminal" and start it.  A new window will appear with a
+    command prompt.  When that window is the selected window, type `cd
+    Documents`, then press the return key, or replace `Documents` with
+    whatever folder you decided upon in step S4.  The instructions
+    below have some steps where you will be asked to enter commands in
+    the Terminal window.
+
+S8. To ensure that Spotlight search is working on your system at all,
+    start Microsoft PowerPoint.  Use the menu item "File -> New
+    Presentation" to open a new presentation.  Type your selected
+    search term, e.g. `oleasterich` somewhere in that new presentation
+    document.  Use "File -> Save" to save the document, using the
+    selected file name, e.g. "foop".  Click the Save button.  Verify
+    that within a few seconds, this file name appears in the search
+    results window, and remains there for at least 10 seconds or so.
+    If everything goes as expected here, quit PowerPoint, and delete
+    the document you saved.  The document should then disappear from
+    the search results window.
+    
+    If the new document does _not_ appear in the search results window
+    soon, do not bother continuing with the rest of this test.
+    Perhaps you have Spotlight search disabled on your system.  See
+    [here](https://support.apple.com/kb/ph25486?locale=en_US) for
+    instructions by Apple on enabling Spotlight, although doing so on
+    a system will likely cause it to take a significant amount of
+    time, e.g. hours to finish indexing (go back to step S2 above).
 
 Test sequence:
 
-0. Pick a folder in which to save a new document, one that has no file
-   named foo.docx in it already.  A folder newly created for testing
-   purposes is good.  Also open a new window in Finder, and enter the
-   search term in the text box near the upper right of the window.
-   Leave this window open and visible during the tests so you can
-   watch as its search results change (or not).
-1. Start Word
-2. Select menu item File -> New Document
-3. Enter text "oleasterich"
-4. Select menu item File -> Save As.  Leave File format as the default
-   "Word Document (.docx)".  Named the file "foo", which becomes
-   "foo.docx" with the default file name extension added by Word.
-   Click Save button to save.
-5. Left the Word document open.
-6. Examine the search results for the search term, either via `mdfind`
-   command in Terminal, via the Finder window created in step 0, or
-   both.
+1. Start Microsoft Word
+2. Select menu item "File -> New Document"
+3. Type your selected search term, e.g. "oleasterich"
+4. Select menu item File -> Save.  Leave File format as the default
+   "Word Document (.docx)".  Enter the selected file name,
+   e.g. "foop", which becomes "foop.docx" with the default file name
+   extension added by Word.  Click the Save button.
+5. Leave the Word document open.
+6. Examine the search results window.  The name of the document you
+   just saved should ideally appear within a few seconds, and stay
+   there, but this does not always happen with some Macs I have tried.
 
-From this point, I saw several different variations for what happened
-next.
+If the document you saved appears in the search results window and
+stays there for a while, e.g. at least 15 seconds or so, continue with
+step 7 below.
 
-+ "good results" - Soon after saving the document, foo.docx was found
-  by a Spotlight search, both in the Finder window kept open for that
-  purpose, and via the `mdfind` command in Terminal.  Continue with
-  step 7 below.
-+ "bad results" - Within 60 seconds after saving the document,
-  foo.docx was never found by a Spotlight search, neither in a Finder
-  window, nor via `mdfind` command in Terminal.  Continue with step 11
-  below.
-+ "bad results, with brief but temporary good results" - foo.docx was
-  displayed as a matching result in a Finder window, but only for a
-  few seconds, then it disappeared, and it did not return within 60
-  seconds after saving the document.  It did not show up at that time
-  via `mdfind` command, either.  Continue with step 11 below.
-+ "bad results variant 2" - This begins like the "good results"
-  sequence, but the file disappears from the Spotlight search results
-  after opening the document in Word in step 9 below.
-+ "bad results variant 3" - Begins like "bad results" above, but I
-  got different search results after step 13 below.
+If the document does not appear, try to be patient and wait a full 60
+seconds to see if it does eventually appear.  If it does not appear in
+those 60 seconds, continue with step 11 below.  Also continue with
+step 11 if the document did appear in the search results for a little
+while, but then disappeared again and did not reappear for the next 60
+seconds.
 
-Continuing from step 6 above:
+Continuing from step 6 above, if the document is in the search results
+window:
 
-7. In Terminal ran `mdimport -d1 foo.docx`.  The mdimporter reported
-   was: `/System/Library/Spotlight/RichText.mdimporter`.  foo.docx
-   still showed up in Spotlight results.
-8. Closed Word document.  Still in search results.
-9. Opened Word document.
+7. In the Terminal window, type the command `mdimport -d1 foop.docx`,
+   replacing `foop` with the document name you selected.  You should
+   see several lines of output that might look like one of the samples
+   below:
+
+```
+2018-07-12 01:07:17.377 mdimport[66800:550623] Imported '/Users/jafinger/Documents/foop.docx' of type 'org.openxmlformats.wordprocessingml.document' with plugIn /System/Library/Spotlight/RichText.mdimporter.
+```
+
+```
+2018-07-12 01:07:20.501 mdimport[66831:550736] Error loading /Library/Spotlight/Microsoft Office.mdimporter/Contents/MacOS/Microsoft Office:  dlopen(/Library/Spotlight/Microsoft Office.mdimporter/Contents/MacOS/Microsoft Office, 262): no suitable image found.  Did find:
+	/Library/Spotlight/Microsoft Office.mdimporter/Contents/MacOS/Microsoft Office: mach-o, but wrong architecture
+	/Library/Spotlight/Microsoft Office.mdimporter/Contents/MacOS/Microsoft Office: mach-o, but wrong architecture
+2018-07-12 01:07:20.501 mdimport[66831:550736] Cannot find function pointer OfficeImporterPluginFactory for factory BFA4E323-1889-11D9-82C8-000A959816BE in CFBundle/CFPlugIn 0x7f8de5d024b0 </Library/Spotlight/Microsoft Office.mdimporter> (bundle, not loaded)
+2018-07-12 01:07:20.501 mdimport[66831:550736] Imported '/Users/jafinger/Documents/foop.docx' of type 'org.openxmlformats.wordprocessingml.document' with plugIn /Library/Spotlight/Microsoft Office.mdimporter.
+```
+
+   Use your mouse to click near the beginning of that text, and drag
+   to the end, highlighting it, much as you would select text in a
+   Microsoft Word document.  Use the menu item "Edit -> Copy" (or the
+   keyboard shortcut Command-C) to copy it, then paste it into your
+   test results.
+
+   Examine your search results window to see if the presence of the
+   document changes from before you typed the `mdimport` command.  If
+   so, make a note of that change and continue.
+
+8. Close the Word document.  I have never seen this action change
+   whether the document appeared in the search results window.
+
+9. Open the Word document you just saved.  Do not modify the contents
+   of the document, or save it, or anything else other than opening
+   it, so that the window apears showing its contents.
 
 From here I saw two different results.  One I call "good results"
 where the file was still in the search results after opening the
-document in Word.  The other I call "bad results variant 2" where
-the file disappeared from the search results after opening the
-document in Word.  In either case, continue with step 10 below.
+document in Word.  The other I call "bad results variant 2" where the
+file _disappeared_ from the search results after opening the document
+in Word.  In either case, continue with step 10 below.
 
-10.  Quit Word.  Deleted file.
+10.  Quit Word.  Delete the document.
 
-Continuing from step 6 above:
 
-11. In Terminal ran `mdimport -d1 foo.docx`.  The mdimporter reported
-    was: `/System/Library/Spotlight/RichText.mdimporter`.  foo.docx
-    showed up in Spotlight results within seconds.
-12. Closed document window in Word.  Still in search results.
-13. Opened foo.docx again in Word.  I merely opened the document so
-    the window containing its text appeared.  I did not modify the
-    content, save it, or anything other than open the document.
+Continuing from step 6 above, if the document is _not_ in the search
+results window:
+
+11. Same as step 7 above.  I typically saw
+    `/System/Library/Spotlight/RichText.mdimporter` in the output.
+    `foop.docx` showed up in the search results window within seconds.
+
+12. Close the Word document.  I have never seen this action change
+    whether the document appeared in the search results window.
+
+13. Open the Word document you just saved.  Do not modify the contents
+    of the document, or save it, or anything else other than opening
+    it, so that the window apears showing its contents.
 
 From here I saw two different results.  One I call "bad results
 variant 3" where the file was still in the search results after
 opening the document in Word.  The other I call "bad results" where
-the file disappeared from the search results after opening the
+the file _disappeared_ from the search results after opening the
 document in Word, within a couple of seconds.  In either case,
 continue with step 14 below.
 
-14. Quit Word.  Deleted file.
+14. Quit Word.  Delete the document.
+
+
+Whether you ended at step 10 or step 14, after deleting the document,
+it should not appear in the search results window afterward.
+
+If you want to send me results that I can collect and report to
+Microsoft and/or Apple, it should look like the following example,
+except customized for your particular system and the results that you
+observed.  See below the sample output for how to find out the version
+numbers for your system.
+
+```
+Operating system version: 10.12.6
+Microsoft Word for Mac version: 16.14.1 (180613)
+Test results: bad results variant 3
+Output of mdimport command:
+2018-07-12 02:20:08.033 mdimport[96475:686432] Imported '/Users/jafinger/Documents/foop.docx' of type 'org.openxmlformats.wordprocessingml.document' with plugIn /System/Library/Spotlight/RichText.mdimporter.
+```
+
+To find the operating system version, click on the apple icon near the
+upper left of your screen.  In the menu that appears click "About This
+Mac".  In the window that appears you should see `Version 10.<some
+number>.<some number>`.
+
+To find your Microsoft Word version, start Word, click on the "Word"
+menu title near the top left of the screen, and in the menu that
+appears click "About Microsoft Word".  The version number should be
+one of the first items of text in the window that appears.
+
+If you are interested, try starting over at step 1 and see if you get
+the same or different results.  I have gotten different results on
+consecutive tries on several systems, oddly enough.  If you repeated
+the test multiple times and want to include all of the results you
+observed, simply add a separate line for each test result you saw, in
+the order you saw them.
 
 
 # Test results group 1
