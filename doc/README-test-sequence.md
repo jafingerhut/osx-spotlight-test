@@ -4,11 +4,11 @@ Note: All test results were performed on a system with very light CPU
 and memory load.  The average CPU load was under 10% for the entire
 duration of the tests, as shown by Apple's Activity Monitor.
 
-Spotlight indexing had been done on the system, but completed days
-before these tests were run, as determined by the indexing progress
-bar that shows up in Apple's Spotlight GUI window that appears when
-you click on the Spotlight icon near the right of the top of screen
-menu bar, and type any search term.
+Spotlight indexing had been done on the system, but completed before
+these tests were run, as determined by the indexing progress bar that
+shows up in Apple's Spotlight GUI window that appears when you click
+on the Spotlight icon near the right of the top of screen menu bar,
+and type any search term.
 
 
 # Description of test sequence used
@@ -16,7 +16,7 @@ menu bar, and type any search term.
 This test sequence is only relevant if you have a Mac with at least
 Microsoft Word and PowerPoint installed on it.
 
-Setup:
+## Setup
 
 S1. Quit all or at least most applications on your system.
 
@@ -27,7 +27,8 @@ S2. Click on the Spotlight search icon on the right side of your menu
     "Indexing" with a progress bar next to it immediately beneath the
     search term you typed, then your system has not completed
     Spotlight indexing.  Wait until it is finished before running this
-    test.
+    test.  If your computer only recently started indexing on a disk
+    with many files, completing could take hours.
 
 S3. Start the Activity Monitor program to verify that your system is
     mostly idle.  In a Finder window, go to the Applications folder.
@@ -52,27 +53,27 @@ S4. Pick a folder in which to save a new document.  I will use
 
 S5. Pick a file name to save in that folder that does not already
     exist as a Microsoft Word or PowerPoint document there.  I will
-    use "foop" for this example.  Choose a name with only letters in
+    use `foop` for this example.  Choose a name with only letters in
     it, i.e. no spaces, digits, or other non-letter characters (this
     makes it straightforward to type it in one of the test sequence
-    steps later).  Choose a name that is _different_ than the search
-    term you select in the next step.  We want to test whether
+    steps later).  Choose a file name that is _different_ than the
+    search term you select in the next step.  We want to test whether
     Spotlight can find a file based on a word in the document's
     _content_, not based on the name of the file.
 
-S6. In Finder, select the menu item "File -> New Finder Window", and
-    in the text box near the top right of the Finder window that says
-    "Search" inside of it, enter a made-up word that you don't expect
-    to exist in any documents on your computer already.  In my case, I
-    used the made up non-word `oleasterich` as my search term, and
+S6. In Finder, select the menu item "File -> New Finder Window".  In
+    the new Finder window that appears, in the text box near the top
+    right that says "Search" inside of it, enter a made-up word that
+    you don't expect to exist in any documents on your computer
+    already.  In my case, I used `oleasterich` as my search term, and
     when I type that search term, no documents show up in the search
-    results.  Just keep adding more arbitrary letters until the search
-    results show no documents.  I will call this window the "search
-    results window" below.  If you can, position this window on your
-    screen somewhere where you can always see at least the top few
-    lines of the search results, if not the entire window.  You will
-    be checking what documents appear in this search results window
-    several times during the test.
+    results.  Just keep adding more arbitrary letters to your search
+    term until the search results show no documents.  I will call this
+    window the "search results window" below.  If you can, position
+    this window on your screen somewhere where you can always see at
+    least the top few lines of the search results, if not the entire
+    window.  You will be checking what documents appear in this search
+    results window several times during the test.
 
 S7. Start the Terminal application.  In the same Utilities folder
     where you found Activity Monitor in step S3, find the application
@@ -88,48 +89,52 @@ S8. To ensure that Spotlight search is working on your system at all,
     Presentation" to open a new presentation.  Type your selected
     search term, e.g. `oleasterich` somewhere in that new presentation
     document.  Use "File -> Save" to save the document, using the
-    selected file name, e.g. "foop".  Click the Save button.  Verify
+    selected file name, e.g. `foop`.  Click the Save button.  Verify
     that within a few seconds, this file name appears in the search
     results window, and remains there for at least 10 seconds or so.
     If everything goes as expected here, quit PowerPoint, and delete
     the document you saved.  The document should then disappear from
     the search results window.
-    
-    If the new document does _not_ appear in the search results window
-    soon, do not bother continuing with the rest of this test.
-    Perhaps you have Spotlight search disabled on your system.  See
-    [here](https://support.apple.com/kb/ph25486?locale=en_US) for
-    instructions by Apple on enabling Spotlight, although doing so on
-    a system will likely cause it to take a significant amount of
-    time, e.g. hours to finish indexing (go back to step S2 above).
 
-Test sequence:
+S9. Choose a place to save your test results, e.g. a TextEdit
+    document, a new email message, etc.  Choose somewhere other than a
+    Microsoft Word document, since the test sequence requires quitting
+    Word before the test is done.
+    
+If the new document does _not_ appear in the search results window
+soon, do not bother continuing with the rest of this test.
+Perhaps you have Spotlight search disabled on your system.  See
+[here](https://support.apple.com/kb/ph25486?locale=en_US) for
+instructions by Apple on enabling Spotlight, although doing so on
+a system will likely cause it to take a significant amount of
+time, e.g. hours to finish indexing (go back to step S2 above).
+
+## Test sequence
 
 1. Start Microsoft Word
 2. Select menu item "File -> New Document"
-3. Type your selected search term, e.g. "oleasterich"
-4. Select menu item File -> Save.  Leave File format as the default
+3. Type your selected search term, e.g. `oleasterich`
+4. Select menu item "File -> Save".  Leave File format as the default
    "Word Document (.docx)".  Enter the selected file name,
-   e.g. "foop", which becomes "foop.docx" with the default file name
-   extension added by Word.  Click the Save button.
+   e.g. `foop`.  Click the Save button.
 5. Leave the Word document open.
 6. Examine the search results window.  The name of the document you
    just saved should ideally appear within a few seconds, and stay
    there, but this does not always happen with some Macs I have tried.
 
-If the document you saved appears in the search results window and
-stays there for a while, e.g. at least 15 seconds or so, continue with
-step 7 below.
+If the file you saved appears in the search results window and stays
+there for a while, e.g. at least 15 seconds or so, continue with step
+7 below.
 
-If the document does not appear, try to be patient and wait a full 60
+If the file does not appear, try to be patient and wait a full 60
 seconds to see if it does eventually appear.  If it does not appear in
 those 60 seconds, continue with step 11 below.  Also continue with
 step 11 if the document did appear in the search results for a little
 while, but then disappeared again and did not reappear for the next 60
 seconds.
 
-Continuing from step 6 above, if the document is in the search results
-window:
+Continuing from step 6 above, if the file did appear in the search
+results window:
 
 7. In the Terminal window, type the command `mdimport -d1 foop.docx`,
    replacing `foop` with the document name you selected.  You should
@@ -156,7 +161,8 @@ window:
 
    Examine your search results window to see if the presence of the
    document changes from before you typed the `mdimport` command.  If
-   so, make a note of that change and continue.
+   so, make a note of that change in your test results like "In step
+   7, file disappeared from search results" and continue.
 
 8. Close the Word document.  I have never seen this action change
    whether the document appeared in the search results window.
@@ -174,12 +180,16 @@ in Word.  In either case, continue with step 10 below.
 10.  Quit Word.  Delete the document.
 
 
-Continuing from step 6 above, if the document is _not_ in the search
-results window:
+Continuing from step 6 above, if the file did _not_ appear in the
+search results window:
 
 11. Same as step 7 above.  I typically saw
     `/System/Library/Spotlight/RichText.mdimporter` in the output.
     `foop.docx` showed up in the search results window within seconds.
+
+   If it does _not_ show up within a few seconds in your testing, make
+   a note in your test results like "In step 11, file did not appear
+   in search results" and continue.
 
 12. Close the Word document.  I have never seen this action change
     whether the document appeared in the search results window.
