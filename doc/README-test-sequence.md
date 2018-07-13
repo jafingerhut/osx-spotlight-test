@@ -265,18 +265,18 @@ for which test results have been recorded.
 
 | Group # | OSX version | Microsoft Word version | RichText mdimporter Info.plist file | Notes |
 | ------- | ----------- | ---------------------- | ----------------------------------- | ----- |
-|  1 | 10.12.6 | 16.9    | never modified since OS installed | some good, some bad results (no variant 2 or 3 bad results) |
-|  2 | 10.12.6 | 16.14.1 | never modified since OS installed | some good, some bad results (no variant 2 or 3 bad results) |
-|  3 | 10.12.6 | 16.14.1 | modified | all good results |
-|  4 | 10.12.6 | 16.14.1 | restored to original after earlier being modified | all bad results (no variant 2 or 3 bad results) |
-|  5 | 10.13.5 | 16.14.1 | never modified since OS installed | some good, some bad results (all 3 variants of bad results) |
-|  6 | 10.13.5 | 16.14.1 | modified | all good results |
-|  7 | 10.13.5 | 16.14.1 | restored to original after earlier being modified | all good results |
-|  8 | 10.11.6 | 16.14.1 | never modified since OS installed | all results bad, variant 3 |
-|  9 | 10.11.6 | 16.14.1 | modified | all good results, with the exception of 1 out of 15 tries being bad variant 3 |
-| 10 | 10.11.6 | 16.15   | modified | all good results |
-| 11 | 10.11.6 | 16.15   | restored to original after earlier being modified | all good results |
-| 12 | 10.9.5  | 14.7.7  | never modified since OS installed | all good results |
+|  [[1]](#test-results-group-1)  | 10.12.6 | 16.9    | never modified since OS installed | some good, some bad results (no variant 2 or 3 bad results) |
+|  [[2]](#test-results-group-2)  | 10.12.6 | 16.14.1 | never modified since OS installed | some good, some bad results (no variant 2 or 3 bad results) |
+|  [[3]](#test-results-group-3)  | 10.12.6 | 16.14.1 | modified | all good results |
+|  [[4]](#test-results-group-4)  | 10.12.6 | 16.14.1 | restored to original after earlier being modified | all bad results (no variant 2 or 3 bad results) |
+|  [[5]](#test-results-group-5)  | 10.13.5 | 16.14.1 | never modified since OS installed | some good, some bad results (all 3 variants of bad results) |
+|  [[6]](#test-results-group-6)  | 10.13.5 | 16.14.1 | modified | all good results |
+|  [[7]](#test-results-group-7)  | 10.13.5 | 16.14.1 | restored to original after earlier being modified | all good results |
+|  [[8]](#test-results-group-8)  | 10.11.6 | 16.14.1 | never modified since OS installed | all results bad, variant 3 |
+|  [[9]](#test-results-group-9)  | 10.11.6 | 16.14.1 | modified | all good results, with the exception of 1 out of 15 tries being bad variant 3 |
+| [[10]](#test-results-group-10) | 10.11.6 | 16.15   | modified | all good results |
+| [[11]](#test-results-group-11) | 10.11.6 | 16.15   | restored to original after earlier being modified | all good results |
+| [[12]](#test-results-group-12) | 10.9.5  | 14.7.7  | never modified since OS installed | all good results |
 
 
 ## Test results group 1
