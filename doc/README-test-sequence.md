@@ -265,18 +265,18 @@ for which test results have been recorded.
 
 | Group # | OSX version | Microsoft Word version | RichText mdimporter Info.plist file | Notes |
 | ------- | ----------- | ---------------------- | ----------------------------------- | ----- |
-|  1 | 10.12.6 | 16.9    | never modified since OS installed | |
-|  2 | 10.12.6 | 16.14.1 | never modified since OS installed | |
-|  3 | 10.12.6 | 16.14.1 | modified | |
-|  4 | 10.12.6 | 16.14.1 | restored to original after earlier being modified | |
-|  5 | 10.13.5 | 16.14.1 | never modified since OS installed | |
-|  6 | 10.13.5 | 16.14.1 | modified | |
-|  7 | 10.13.5 | 16.14.1 | restored to original after earlier being modified | |
-|  8 | 10.11.6 | 16.14.1 | never modified since OS installed | |
-|  9 | 10.11.6 | 16.14.1 | modified | |
-| 10 | 10.11.6 | 16.15   | modified | |
-| 11 | 10.11.6 | 16.15   | restored to original after earlier being modified | |
-| 12 | 10.9.5  | 14.7.7  | never modified since OS installed | |
+|  1 | 10.12.6 | 16.9    | never modified since OS installed | some good, some bad results (no variant 2 or 3 bad results) |
+|  2 | 10.12.6 | 16.14.1 | never modified since OS installed | some good, some bad results (no variant 2 or 3 bad results) |
+|  3 | 10.12.6 | 16.14.1 | modified | all good results |
+|  4 | 10.12.6 | 16.14.1 | restored to original after earlier being modified | all bad results (no variant 2 or 3 bad results) |
+|  5 | 10.13.5 | 16.14.1 | never modified since OS installed | some good, some bad results (all 3 variants of bad results) |
+|  6 | 10.13.5 | 16.14.1 | modified | all good results |
+|  7 | 10.13.5 | 16.14.1 | restored to original after earlier being modified | all good results |
+|  8 | 10.11.6 | 16.14.1 | never modified since OS installed | all results bad, variant 3 |
+|  9 | 10.11.6 | 16.14.1 | modified | all good results, with the exception of 1 out of 15 tries being bad variant 3 |
+| 10 | 10.11.6 | 16.15   | modified | all good results |
+| 11 | 10.11.6 | 16.15   | restored to original after earlier being modified | all good results |
+| 12 | 10.9.5  | 14.7.7  | never modified since OS installed | all good results |
 
 
 ## Test results group 1
