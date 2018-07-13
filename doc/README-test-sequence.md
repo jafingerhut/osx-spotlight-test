@@ -264,19 +264,19 @@ Summary of operating system and Microsoft Word version combinations
 for which test results have been recorded.
 
 | Group # | OSX version | Microsoft Word version | RichText mdimporter Info.plist file | Notes |
-| ------- | ----------- | ---------------------- | ----- |
-|  1 | 10.12.6 | 16.9    | never modified since OS installed |
-|  2 | 10.12.6 | 16.14.1 | never modified since OS installed |
-|  3 | 10.12.6 | 16.14.1 | modified |
-|  4 | 10.12.6 | 16.14.1 | restored to original after earlier being modified |
-|  5 | 10.13.5 | 16.14.1 | never modified since OS installed |
-|  6 | 10.13.5 | 16.14.1 | modified |
-|  7 | 10.13.5 | 16.14.1 | restored to original after earlier being modified |
-|  8 | 10.11.6 | 16.14.1 | never modified since OS installed |
-|  9 | 10.11.6 | 16.14.1 | modified |
-| 10 | 10.11.6 | 16.15   | modified |
-| 11 | 10.11.6 | 16.15   | restored to original after earlier being modified |
-| 12 | 10.9.5  | 14.7.7  | never modified since OS installed |
+| ------- | ----------- | ---------------------- | ----------------------------------- | ----- |
+|  1 | 10.12.6 | 16.9    | never modified since OS installed | |
+|  2 | 10.12.6 | 16.14.1 | never modified since OS installed | |
+|  3 | 10.12.6 | 16.14.1 | modified | |
+|  4 | 10.12.6 | 16.14.1 | restored to original after earlier being modified | |
+|  5 | 10.13.5 | 16.14.1 | never modified since OS installed | |
+|  6 | 10.13.5 | 16.14.1 | modified | |
+|  7 | 10.13.5 | 16.14.1 | restored to original after earlier being modified | |
+|  8 | 10.11.6 | 16.14.1 | never modified since OS installed | |
+|  9 | 10.11.6 | 16.14.1 | modified | |
+| 10 | 10.11.6 | 16.15   | modified | |
+| 11 | 10.11.6 | 16.15   | restored to original after earlier being modified | |
+| 12 | 10.9.5  | 14.7.7  | never modified since OS installed | |
 
 
 ## Test results group 1
