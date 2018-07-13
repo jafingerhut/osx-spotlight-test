@@ -277,6 +277,7 @@ for which test results have been recorded.
 | [[10]](#test-results-group-10) | 10.11.6 | 16.15   | modified | all good results |
 | [[11]](#test-results-group-11) | 10.11.6 | 16.15   | restored to original after earlier being modified | all good results |
 | [[12]](#test-results-group-12) | 10.9.5  | 14.7.7  | never modified since OS installed | all good results |
+| [[13]](#test-results-group-13) | 10.13.6 | 16.15   | never modified since OS installed | all good results |
 
 
 ## Test results group 1
@@ -803,6 +804,28 @@ mdimporter used.
 + Try  3: good results
 + Try  4: good results
 + Try  5: good results
+
+
+## Test results group 13
+
++ OSX 10.13.6 running in a VMware Fusion VM on a MacBook Pro
++ Microsoft Word for Mac Version 16.15 (180709) installed via Office 365
+
+Like "Test results group 5", this was a fresh install of OSX 10.12.6
+on a VMware Fusion VM, then update to macOS High Sierra, then install
+Microsoft Office via Office 365 as the first and only application
+install.
+
++ Try  1: good results
++ Try  2: good results
++ Try  3: good results
++ Try  4: good results
++ Try  5: good results
++ Try  6: good results
++ Try  7: good results
++ Try  8: good results
++ Try  9: good results
++ Try 10: good results
 
 
 # Reporting of these results
