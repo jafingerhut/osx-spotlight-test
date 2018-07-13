@@ -258,7 +258,28 @@ You can stop reading here, unless you are interested in the gory
 details of the test results that I recorded on several Macs of mine.
 
 
-# Test results group 1
+# Test results
+
+Summary of operating system and Microsoft Word version combinations
+for which test results have been recorded.
+
+| Group # | OSX version | Microsoft Word version | RichText mdimporter Info.plist file | Notes |
+| ------- | ----------- | ---------------------- | ----- |
+|  1 | 10.12.6 | 16.9    | never modified since OS installed |
+|  2 | 10.12.6 | 16.14.1 | never modified since OS installed |
+|  3 | 10.12.6 | 16.14.1 | modified |
+|  4 | 10.12.6 | 16.14.1 | restored to original after earlier being modified |
+|  5 | 10.13.5 | 16.14.1 | never modified since OS installed |
+|  6 | 10.13.5 | 16.14.1 | modified |
+|  7 | 10.13.5 | 16.14.1 | restored to original after earlier being modified |
+|  8 | 10.11.6 | 16.14.1 | never modified since OS installed |
+|  9 | 10.11.6 | 16.14.1 | modified |
+| 10 | 10.11.6 | 16.15   | modified |
+| 11 | 10.11.6 | 16.15   | restored to original after earlier being modified |
+| 12 | 10.9.5  | 14.7.7  | never modified since OS installed |
+
+
+## Test results group 1
 
 + MacBook Pro running OSX 10.12.6
 + Microsoft Word for Mac Version 16.9 (180116)
@@ -328,7 +349,7 @@ $ mdimport -L
 + Try 20: bad results, with brief but temporary good results
 
 
-# Test results group 2
+## Test results group 2
 
 On same computer, remained at same version of OSX, but updated to
 latest version of Microsoft Office for Mac available at the time,
@@ -350,7 +371,7 @@ shown below:
 + Try 10: good results
 
 
-# Test results group 3
+## Test results group 3
 
 On same computer:
 
@@ -405,7 +426,7 @@ Info.plist file.
 + Try 10: good results
 
 
-# Test results group 4
+## Test results group 4
 
 This is the same system as group 3 above, except that I disabled SIP,
 restored the RichText Info.plist file to its original contents, then
@@ -435,7 +456,7 @@ in a Terminal was back to its original:
 + Try 10: bad results
 
 
-# Test results group 5
+## Test results group 5
 
 + OSX 10.13.5 running in a VMware Fusion VM on a MacBook Pro
 + Microsoft Word for Mac Version 16.14.1 (180613) installed via Office 365
@@ -506,7 +527,7 @@ $ grep openxmlformats.wordprocessingml.document /Library/Spotlight/Microsoft\ Of
 + Try 10: bad results
 
 
-# Test results group 6
+## Test results group 6
 
 On same computer (a VM) as "Test results group 5":
 
@@ -544,7 +565,7 @@ Info.plist file.
 + Try 10: good results
 
 
-# Test results group 7
+## Test results group 7
 
 On same computer (a VM) as "Test results group 5" and "Test results
 group 6":
@@ -578,7 +599,7 @@ to showing RichText as the mdimporter used, as it was for "Test
 results group 5".
 
 
-# Test results group 8
+## Test results group 8
 
 + OSX 10.11.6 running on an MacBook Pro, 15-inch Early 2008 model
 + Microsoft Word for Mac Version 16.14.1 (180613) installed via Office 365
@@ -668,7 +689,7 @@ both the Save and Open windows.
 + Try  5: bad results variant 3
 
 
-# Test results group 9
+## Test results group 9
 
 On same computer as "Test results group 8":
 
@@ -726,7 +747,7 @@ ran.
 + Try 10: good results
 
 
-# Test results group 10
+## Test results group 10
 
 On same computer as "Test results group 8", except Office 365 was
 updated, then system shut down and booted again:
@@ -749,7 +770,7 @@ mdimporter this time:
 + Try  5: good results
 
 
-# Test results group 11
+## Test results group 11
 
 On same computer as "Test results group 8", with Office 365 updated as
 described in "Test results group 10".
@@ -761,6 +782,21 @@ Also, I have disabled SIP, restored the following file to its original
 contents, enabled SIP, and rebooted after enabling SIP.
 
     /System/Library/Spotlight/RichText.mdimporter/Contents/Info.plist
+
++ Try  1: good results
++ Try  2: good results
++ Try  3: good results
++ Try  4: good results
++ Try  5: good results
+
+
+## Test results group 12
+
++ OSX 10.9.5 running on a MacBook Air, 13-inch Mid 2012 model
++ Microsoft Word for Mac 2011 Version 14.7.7
+
+The `mdimport -d1 foop.docx` command always reported RichText as the
+mdimporter used.
 
 + Try  1: good results
 + Try  2: good results
