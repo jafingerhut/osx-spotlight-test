@@ -814,7 +814,7 @@ mdimporter used.
 + OSX 10.13.6 running in a VMware Fusion VM on a MacBook Pro
 + Microsoft Word for Mac Version 16.15 (180709) installed via Office 365
 
-Like "Test results group 5", this was a fresh install of OSX 10.12.6
+Like "Test results group 5", this was a fresh install of OSX 10.13.6
 on a VMware Fusion VM, then update to macOS High Sierra, then install
 Microsoft Office via Office 365 as the first and only application
 install.
