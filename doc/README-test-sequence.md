@@ -1,15 +1,18 @@
 # Introduction
 
 This document is for recording results of a particular test sequence
-that on several Macs I have tried it on, demonstrates incorrect search
-results from Spotlight for Microsoft Word documents.
+that demonstrates _incorrect_ search results from Spotlight for
+Microsoft Word documents, on several Macs that I and others have tried
+it on.
 
-If you would like to help draw the attention of a Microsoft developer
-to the problem, hopefully someone that can determine the root cause
-and have it fixed, please create a free account on Microsoft's "user
-voice" web site
-[here](https://word.uservoice.com/forums/304942-word-for-mac/suggestions/10998114-apple-s-spotlight-can-t-find-word-docx-files),
-and vote on the issue.
+Please [vote
+here](https://word.uservoice.com/forums/304942-word-for-mac/suggestions/10998114-apple-s-spotlight-can-t-find-word-docx-files)!
+With enough votes, we can draw the attention of a Microsoft developer
+to the problem -- hopefully someone that can determine the root cause
+and have it fixed.  Click on the "Vote" button on the left side of the
+window, and enter your email address.  I have done this and so far
+have not received any spam from it, so you should be OK here.  This is
+a Microsoft web site.
 
 Note: All test results were performed on a system with very light CPU
 and memory load.  The average CPU load was under 10% for the entire
@@ -826,6 +829,83 @@ install.
 + Try  8: good results
 + Try  9: good results
 + Try 10: good results
+
+I shut down this machine, rebooted, and installed the OSX version of
+git from [this page](https://git-scm.com/download/mac), then did `git
+clone https://github.com/jafingerhut/osx-spotlight-test` to get this
+collection of files copied onto that virtual machine.  _Now the test
+results look very different_.  I am baffled as to why.
+
++ Try  1: bad results
++ Try  2: bad results
++ Try  3: bad results
++ Try  4: bad results
++ Try  5: bad results
+
+Now try deleting the copy of the `osx-spotlight-test` directory and
+all files within it, then run the test sequence again.
+
++ Try  1: bad results
++ Try  2: bad results
++ Try  3: bad results
++ Try  4: bad results
++ Try  5: bad results
+
+Is it because of the installation of git?  I doubt it, as I think I
+have gotten bad results from machines where I did not install that
+program.  But it would be relatively quick to do a test on a VM where
+I had only installed Microsoft Office and git, but not yet done any
+`git clone` commands, to see what happens.
+
+Is it because this README-test-sequence.md file itself contains the
+word "oleasterich"?  I doubt it, because I also tried creating a Word
+document with a different made-up word, and it had the same "bad
+results" as for a document containing only the word "oleasterich".
+
+Maybe it is because the command `git clone
+https://github.com/jafingerhut/osx-spotlight-test` creates some weird
+files that mess up the Spotlight index somehow?  There are no
+Microsoft Office format files in that repository when I ran this test,
+so it cannot be files of that format causing the issue here.
+
+I started over with a freshly installed OSX 10.13.6 VM, and a fresh
+installation of MS Office 16.15, with no other applications.  A few
+test results came back good.  Then I installed the OSX git
+application, but did not clone any files.  Again, a few test results
+came back good.
+
+Next: In a Terminal window, used `vi README.md` command to create a
+plain text file of that name with the only contents being the word
+`oleasterich`.  It soon showed up in Spotlight search results.  After
+creating that file and leaving it there, several test sequences gave
+good results, with the Word files appearing as I created them, and
+disappearing as I deleted them, and the text README.md file staying
+there the entire time.
+
+Next I did `git clone https://github.com/clojure/clojure`, which
+should not contain any Microsoft-related files at all, but does have
+several files with an `.md` suffix in their names (if that is even
+relevant -- it may not be).  I verified that it contains no files with
+`.doc` `.xls` nor `.ppt` in their names (and thus neither longer
+suffixes like `.docx`).  I verified that Spotlight indexing was
+complete after that, and that Spotlight could find the term `pprint`
+that I knew occurred in many of the files in that repository, and they
+were found.  At that time, 3 test sequences gave good results.
+
+So installing the git application didn't cause problems.  Cloning just
+any old git repository in the world doesn't' automatically cause
+problems.  Using `vi` to create a `README.md` file with the search
+term in it didn't cause problems.
+
+Now I did `git clone
+https://github.com/jafingerhut/osx-spotlight-test`.  I verified that
+it contained no files with a `.doc` nor `.docx` suffix in their names,
+nor `xls` nor `ppt`.  I did the test sequence 5 times and got good
+results on all of them.
+
+What is going on?  I do not yet have a reproducible way to trigger
+going from the state "all test sequences give good results" to "some
+or all test sequences give bad results".
 
 
 # Reporting of these results
