@@ -281,6 +281,7 @@ for which test results have been recorded.
 | [[11]](#test-results-group-11) | 10.11.6 | 16.15   | restored to original after earlier being modified | all good results |
 | [[12]](#test-results-group-12) | 10.9.5  | 14.7.7  | never modified since OS installed | all good results |
 | [[13]](#test-results-group-13) | 10.13.6 | 16.15   | never modified since OS installed | all good results |
+| [[15]](#test-results-group-15) | 10.14   | 16.17   | never modified since OS installed | all good results |
 
 
 ## Test results group 1
@@ -906,6 +907,54 @@ results on all of them.
 What is going on?  I do not yet have a reproducible way to trigger
 going from the state "all test sequences give good results" to "some
 or all test sequences give bad results".
+
+
+## Test results group 14
+
++ OSX 10.13.4 running on a MacBook Air 13-inch Early 2014
++ Microsoft Word for Mac Version 15.27 (161010)
+
++ Try  1: good results
++ Try  2: good results
++ Try  3: good results
++ Try  4: good results
+
+
+## Test results group 15
+
++ OSX 10.14 running in a VMware Fusion VM on a MacBook Pro
++ Microsoft Word for Mac Version 16.17 (180909) installed via Office 365
+
+BIG NEWS!  The default contents of the RichText.mdimporter's
+Info.plist file _no longer contains_ the line that makes that
+mdimporter be a Spotlight importer for files with this type:
+
+    org.openxmlformats.wordprocessingml.document
+
+That is a modification I had tested and found good results with on OSX
+10.11, 10.12, and 10.13, so maybe someone at Apple has changed this
+with macOS 10.14 Mojave?  This is very good news!
+
+There was a small difference I noted here during step 7 of the test
+sequence.  There were no error messages like "Cannot find function
+pointer".
+
+```
+2018-09-24 15:34:31.675 mdimport[4769:32087] Imported '/Users/andy/Documents/foop.docx' of type 'org.openxmlformats.wordprocessingml.document' with plugIn /System/Library/Spotlight/Office.mdimporter.
+```
+
+At least on Try 1, the file did not disappear from the search results
+during step 7.
+
+On try 1, step 9, the file foop.docx _briefly_ disappeared from the
+search results, then reappeared in less than 1 second after
+disappearing.
+
++ Try  1: good results
++ Try  2: good results
++ Try  3: good results
++ Try  4: good results
++ Try  5: good results
 
 
 # Reporting of these results
