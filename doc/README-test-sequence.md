@@ -1,5 +1,14 @@
 # Introduction
 
+Possibly good news!  I have tested with a fresh install of macOS 10.14
+Mojave, and it appears that Apple may have fixed the Spotlight
+importing problems that have been plaguing some people with indexing
+Microsoft Word .docx file!
+
+Here is a link to an issue I posted on discussion.apple.com about it:
+
+    https://discussions.apple.com/message/33919531
+
 This document is for recording results of a particular test sequence
 that demonstrates _incorrect_ search results from Spotlight for
 Microsoft Word documents, on several Macs that I and others have tried
