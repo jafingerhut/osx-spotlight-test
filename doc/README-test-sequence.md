@@ -1,12 +1,19 @@
 # Introduction
 
 Possibly good news!  I have tested with a fresh install of macOS 10.14
-Mojave, and it appears that Apple may have fixed the Spotlight
+"Mojave", and it appears that Apple may have fixed the Spotlight
 importing problems that have been plaguing some people with indexing
-Microsoft Word .docx file!
+the contents of Microsoft Word .docx files!
 
-Here is a link to an issue I posted on discussion.apple.com about it:
+Here is a link to an Apple discussions form posting I wrote about it:
 https://discussions.apple.com/message/33919531
+
+If you are having issues with this, and are not able to upgrade to
+Mojave yet for some reason, or you want a free program that can build
+search indexes of document contents that works on Macs as well as
+Linux and Windows machines, I have had some success using a free openhttp://docfetcher.sourceforge.net/en/index.html
+source program called
+[DocFetcher](http://docfetcher.sourceforge.net/en/index.html).
 
 This document is for recording results of a particular test sequence
 that demonstrates _incorrect_ search results from Spotlight for

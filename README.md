@@ -1,12 +1,15 @@
 # Introduction
 
 Possibly good news!  I have tested with a fresh install of macOS 10.14
-Mojave, and it appears that Apple may have fixed the Spotlight
+"Mojave", and it appears that Apple may have fixed the Spotlight
 importing problems that have been plaguing some people with indexing
-Microsoft Word .docx file!
+the contents of Microsoft Word .docx files!
 
-Here is a link to an issue I posted on discussion.apple.com about it:
+Here is a link to an Apple discussions form posting I wrote about it:
 https://discussions.apple.com/message/33919531
+
+Details of my test results on several versions of macOS and Microsoft
+word can be found [here](doc/README-test-sequence.md).
 
 I created this repository in order to test the Mac OS X Spotlight
 feature's indexing and search capabilities.  My initial motivation was
