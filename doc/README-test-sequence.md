@@ -11,7 +11,7 @@ https://discussions.apple.com/message/33919531
 If you are having issues with this, and are not able to upgrade to
 Mojave yet for some reason, or you want a free program that can build
 search indexes of document contents that works on Macs as well as
-Linux and Windows machines, I have had some success using a free openhttp://docfetcher.sourceforge.net/en/index.html
+Linux and Windows machines, I have had some success using an open
 source program called
 [DocFetcher](http://docfetcher.sourceforge.net/en/index.html).
 
