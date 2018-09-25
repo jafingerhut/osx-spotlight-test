@@ -6,8 +6,7 @@ importing problems that have been plaguing some people with indexing
 Microsoft Word .docx file!
 
 Here is a link to an issue I posted on discussion.apple.com about it:
-
-    https://discussions.apple.com/message/33919531
+https://discussions.apple.com/message/33919531
 
 I created this repository in order to test the Mac OS X Spotlight
 feature's indexing and search capabilities.  My initial motivation was
