@@ -20,14 +20,10 @@ that demonstrates _incorrect_ search results from Spotlight for
 Microsoft Word documents, on several Macs that I and others have tried
 it on.
 
-Please [vote
-here](https://word.uservoice.com/forums/304942-word-for-mac/suggestions/10998114-apple-s-spotlight-can-t-find-word-docx-files)!
-With enough votes, we can draw the attention of a Microsoft developer
-to the problem -- hopefully someone that can determine the root cause
-and have it fixed.  Click on the "Vote" button on the left side of the
-window, and enter your email address.  I have done this and so far
-have not received any spam from it, so you should be OK here.  This is
-a Microsoft web site.
+Hopefully this issue is fixed for good now, and it is no longer useful
+to [vote
+here](https://word.uservoice.com/forums/304942-word-for-mac/suggestions/10998114-apple-s-spotlight-can-t-find-word-docx-files)
+to get Microsoft's attention on this.
 
 Note: All test results were performed on a system with very light CPU
 and memory load.  The average CPU load was under 10% for the entire
