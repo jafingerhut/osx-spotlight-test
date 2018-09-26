@@ -15,6 +15,9 @@ Linux and Windows machines, I have had some success using an open
 source program called
 [DocFetcher](http://docfetcher.sourceforge.net/en/index.html).
 
+I have also heard a recommendation for the program
+[FoxTrot](http://www.ctmdev.com) (commercial, Mac only).
+
 This document is for recording results of a particular test sequence
 that demonstrates _incorrect_ search results from Spotlight for
 Microsoft Word documents, on several Macs that I and others have tried
